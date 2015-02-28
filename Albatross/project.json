@@ -1,16 +1,14 @@
-{
+﻿{
     "version": "1.0.0-*",
     "dependencies": {
-        "Albatross.Domain": "1.0.0-*",
-        "Albatross": "1.0.0-*"
     },
 
-    "frameworks": {
-        "aspnet50": {
+    "frameworks" : {
+        "aspnet50" : { 
             "dependencies": {
             }
         },
-        "aspnetcore50": {
+        "aspnetcore50" : { 
             "dependencies": {
                 "System.Runtime": "4.0.20-beta-22523"
             }
