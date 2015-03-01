@@ -12,7 +12,7 @@ namespace Albatross.Example.Web
     {
         public void Configuration(IAppBuilder app)
         {
-            ConfigureAuth(app);
+            
         }
     }
 }
