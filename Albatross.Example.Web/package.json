@@ -10,8 +10,12 @@
   "mainInput": "main",
   "mainOutput": "main",
   "dependencies": {
-    "react-router": "^0.11.6",
-    "react": "~0.12.2"
+    "es6-promise": "^2.0.1",
+    "flux": "^2.0.1",
+    "keymirror": "^0.1.1",
+    "object-assign": "^2.0.0",
+    "react": "~0.12.2",
+    "react-router": "^0.11.6"
   },
   "devDependencies": {
     "grunt": "~0.4.5",

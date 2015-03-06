@@ -1,4 +1,4 @@
-/// <vs BeforeBuild="default" />
+/// <vs />
 "use strict";
 
 var mountFolder = function (connect, dir) {

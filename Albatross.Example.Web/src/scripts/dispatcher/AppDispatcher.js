@@ -1,4 +1,4 @@
-/*
+﻿/*
  * Copyright (c) 2015, Facebook, Inc.
  * All rights reserved.
  *
@@ -6,13 +6,11 @@
  * LICENSE file in the root directory of this source tree. An additional grant
  * of patent rights can be found in the PATENTS file in the same directory.
  *
- * base.css overrides
+ * AppDispatcher
+ *
+ * A singleton that operates as the central hub for application updates.
  */
 
-/**
- * We are not changing from display:none, but rather re-rendering instead.
- * Therefore this needs to be displayed normally by default.
- */
-#todo-list li .edit {
-  display: inline;
-}
+var Dispatcher = require('flux').Dispatcher;
+
+module.exports = new Dispatcher();

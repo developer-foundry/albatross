@@ -47,28 +47,29 @@
     <Folder Include="Properties\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="dist\assets\42092f929161dae9c08a21bfb46ece4d.png" />
-    <Content Include="dist\assets\main.js" />
+    <Content Include="dist\assets\app.js" />
     <Content Include="Gruntfile.js" />
-    <Content Include="karma.conf.js" />
-    <Content Include="src\favicon.ico" />
     <Content Include="src\images\yeoman.png" />
     <Content Include="src\index.html" />
-    <Content Include="src\scripts\components\AlbatrossexamplewebApp.js" />
-    <Content Include="src\scripts\components\main.js" />
+    <Content Include="src\scripts\actions\TodoActions.js" />
+    <Content Include="src\scripts\app.js" />
+    <Content Include="src\scripts\components\Footer.js" />
+    <Content Include="src\scripts\components\Header.js" />
+    <Content Include="src\scripts\components\MainSection.js" />
+    <Content Include="src\scripts\components\TodoApp.js" />
+    <Content Include="src\scripts\components\TodoItem.js" />
+    <Content Include="src\scripts\components\TodoTextInput.js" />
+    <Content Include="src\scripts\constants\TodoConstants.js" />
+    <Content Include="src\scripts\dispatcher\AppDispatcher.js" />
+    <Content Include="src\scripts\dispatcher\Dispatcher.js" />
+    <Content Include="src\scripts\stores\TodoStore.js" />
     <Content Include="src\styles\main.css" />
     <Content Include="src\styles\normalize.css" />
-    <Content Include="test\helpers\phantomjs-shims.js" />
-    <Content Include="test\helpers\react\addons.js" />
-    <Content Include="test\spec\components\AlbatrossexamplewebApp.js" />
     <Content Include="webpack.config.js" />
-    <Content Include="webpack.dist.config.js" />
   </ItemGroup>
   <ItemGroup>
     <Content Include=".jshintrc" />
-    <Content Include=".yo-rc.json" />
     <Content Include="package.json" />
-    <Content Include="test\.jshintrc" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
