@@ -44,25 +44,29 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Gruntfile.js" />
-    <Content Include="grunt\clean.js" />
-    <Content Include="grunt\jshint.js" />
-    <Content Include="grunt\less.js" />
-    <Content Include="grunt\watch.js" />
-    <Content Include="public\anotherPage.html" />
-    <Content Include="public\assets\css\index.css" />
-    <Content Include="public\index.html" />
-    <Content Include="grunt\webpack.js" />
-    <Content Include="client\components\Hello.jsx" />
-    <Content Include="client\js\pages\AnotherPage.jsx" />
-    <Content Include="client\js\pages\Index.jsx" />
-    <Content Include="client\less\index.less" />
-    <None Include="package.json" />
+    <Folder Include="Properties\" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Properties\" />
-    <Folder Include="public\assets\js\" />
-    <Folder Include="tasks\" />
+    <Content Include="Gruntfile.js" />
+    <Content Include="karma.conf.js" />
+    <Content Include="src\favicon.ico" />
+    <Content Include="src\images\yeoman.png" />
+    <Content Include="src\index.html" />
+    <Content Include="src\scripts\components\AlbatrossexamplewebApp.js" />
+    <Content Include="src\scripts\components\main.js" />
+    <Content Include="src\styles\main.css" />
+    <Content Include="src\styles\normalize.css" />
+    <Content Include="test\helpers\phantomjs-shims.js" />
+    <Content Include="test\helpers\react\addons.js" />
+    <Content Include="test\spec\components\AlbatrossexamplewebApp.js" />
+    <Content Include="webpack.config.js" />
+    <Content Include="webpack.dist.config.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include=".jshintrc" />
+    <Content Include=".yo-rc.json" />
+    <Content Include="package.json" />
+    <Content Include="test\.jshintrc" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

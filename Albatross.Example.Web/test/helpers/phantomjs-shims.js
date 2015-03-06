@@ -5,7 +5,7 @@ var slice = Ap.slice;
 var Fp = Function.prototype;
 
 if (!Fp.bind) {
-  // PhantomJS doesn't support Function.prototype.bind natively, so
+  // PhantomJS doesn"t support Function.prototype.bind natively, so
   // polyfill it whenever this module is required.
   Fp.bind = function(context) {
     var func = this;

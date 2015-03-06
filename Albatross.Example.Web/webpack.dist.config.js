@@ -4,21 +4,21 @@
  * This file is set up for serving the distribution version. It will be compiled to dist/ by default
  */
 
-'use strict';
+"use strict";
 
-var webpack = require('webpack');
+var webpack = require("webpack");
 
 module.exports = {
 
   output: {
-    publicPath: '/assets/',
-    path: 'dist/assets/',
-    filename: 'main.js'
+    publicPath: "/assets/",
+    path: "dist/assets/",
+    filename: "main.js"
   },
 
   debug: false,
   devtool: false,
-  entry: './src/scripts/components/main.js',
+  entry: "./src/scripts/components/main.js",
 
   stats: {
     colors: true,
@@ -33,10 +33,10 @@ module.exports = {
   ],
 
   resolve: {
-    extensions: ['', '.js'],
+    extensions: ["", ".js"],
     alias: {
-      'styles': './src/styles',
-      'components': './src/scripts/components/'
+      "styles": "./src/styles",
+      "components": "./src/scripts/components/"
     }
   },
 
@@ -44,22 +44,22 @@ module.exports = {
     preLoaders: [{
       test: /\.js$/,
       exclude: /node_modules/,
-      loader: 'jsxhint'
+      loader: "jsxhint"
     }],
 
     loaders: [{
       test: /\.js$/,
       exclude: /node_modules/,
-      loader: 'jsx-loader?harmony'
+      loader: "jsx-loader?harmony"
     }, {
       test: /\.css$/,
-      loader: 'style-loader!css-loader'
+      loader: "style-loader!css-loader"
     }, {
       test: /\.less/,
-      loader: 'style-loader!css-loader!less-loader'
+      loader: "style-loader!css-loader!less-loader"
     }, {
       test: /\.(png|jpg)$/,
-      loader: 'url-loader?limit=8192'
+      loader: "url-loader?limit=8192"
     }]
   }
 };

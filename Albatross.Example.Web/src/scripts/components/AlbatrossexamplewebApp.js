@@ -1,18 +1,18 @@
-'use strict';
+"use strict";
 
-var React = require('react/addons');
+var React = require("react/addons");
 var ReactTransitionGroup = React.addons.TransitionGroup;
 
 // CSS
-require('styles/normalize.css');
-require('styles/main.css');
+require("../../styles/normalize.css");
+require("../../styles/main.css");
 
-var imageURL = require('../../images/yeoman.png');
+var imageURL = require("../../images/yeoman.png");
 
 var AlbatrossexamplewebApp = React.createClass({
   render: function() {
     return (
-      <div className='main'>
+      <div className="main">
         <ReactTransitionGroup transitionName="fade">
           <img src={imageURL} />
         </ReactTransitionGroup>
