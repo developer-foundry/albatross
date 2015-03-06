@@ -25,6 +25,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SolutionItems", "SolutionIt
 		README.md = README.md
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Albatross.Example.API", "Albatross.Example.API\Albatross.Example.API.csproj", "{2F4FBC1D-4618-4587-B33D-0992198EC9C6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -46,6 +48,10 @@ Global
 		{0E9EA18F-8368-4AD3-AF86-0B3AAEC76323}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0E9EA18F-8368-4AD3-AF86-0B3AAEC76323}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0E9EA18F-8368-4AD3-AF86-0B3AAEC76323}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2F4FBC1D-4618-4587-B33D-0992198EC9C6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2F4FBC1D-4618-4587-B33D-0992198EC9C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2F4FBC1D-4618-4587-B33D-0992198EC9C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2F4FBC1D-4618-4587-B33D-0992198EC9C6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
