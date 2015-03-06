@@ -29,7 +29,7 @@ module.exports = function (grunt) {
     "webpack-dev-server": {
       options: {
         hot: true,
-        port: 8000,
+        port: 8001,
         webpack: webpackDevConfig,
         publicPath: "/assets/",
         contentBase: "./<%= pkg.src %>/",
@@ -42,7 +42,7 @@ module.exports = function (grunt) {
 
     connect: {
       options: {
-        port: 8000
+        port: 8001
       },
 
       dist: {
@@ -66,12 +66,6 @@ module.exports = function (grunt) {
       },
       dist: {
         path: "http://localhost:<%= connect.options.port %>/"
-      }
-    },
-
-    karma: {
-      unit: {
-        configFile: "karma.conf.js"
       }
     },
 
@@ -118,8 +112,6 @@ module.exports = function (grunt) {
       "webpack-dev-server"
     ]);
   });
-
-  grunt.registerTask("test", ["karma"]);
 
   grunt.registerTask("build", ["clean", "copy", "webpack"]);
 
