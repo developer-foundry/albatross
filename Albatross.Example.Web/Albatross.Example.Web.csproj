@@ -47,6 +47,8 @@
     <Folder Include="Properties\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="dist\assets\42092f929161dae9c08a21bfb46ece4d.png" />
+    <Content Include="dist\assets\main.js" />
     <Content Include="Gruntfile.js" />
     <Content Include="karma.conf.js" />
     <Content Include="src\favicon.ico" />
