@@ -47,7 +47,6 @@
     <Folder Include="Properties\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="dist\assets\app.js" />
     <Content Include="Gruntfile.js" />
     <Content Include="src\images\bg.png" />
     <Content Include="src\index.html" />
