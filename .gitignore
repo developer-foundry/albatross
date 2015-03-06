@@ -9,6 +9,7 @@
 #Client Side
 bower_components/
 node_modules/
+dist/
 
 # Build results
 [Dd]ebug/
