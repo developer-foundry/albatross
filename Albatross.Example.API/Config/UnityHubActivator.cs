@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNet.SignalR.Hubs;
 using Microsoft.Practices.Unity;
 
-namespace Albatross.Example.API
+namespace Albatross.Example.API.Config
 {
     public class UnityHubActivator : IHubActivator
     {

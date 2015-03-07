@@ -2,6 +2,7 @@
 using System.Reactive.Linq;
 using System.Runtime.InteropServices;
 using System.Threading;
+using Albatross.Example.API.Config;
 using Microsoft.AspNet.SignalR;
 using Microsoft.Owin;
 using Microsoft.Owin.Hosting;

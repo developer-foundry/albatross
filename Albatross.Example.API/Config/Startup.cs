@@ -1,4 +1,5 @@
 using Albatross.Example.API;
+using Albatross.Example.API.Config;
 using Microsoft.AspNet.SignalR;
 using Microsoft.AspNet.SignalR.Hubs;
 using Microsoft.Owin;
@@ -14,24 +15,21 @@ using Unity.SelfHostWebApiOwin;
 
 [assembly: OwinStartup(typeof(Startup))]
 
-namespace Albatross.Example.API
+namespace Albatross.Example.API.Config
 {
     public class Startup
     {
         private static readonly IUnityContainer _container = UnityHelpers.GetConfiguredContainer();
 
-        // Your startup logic
         public static void StartServer()
         {
             string baseAddress = "http://localhost:8081/";
             var startup = _container.Resolve<Startup>();
-             //options.ServerFactory = "Microsoft.Owin.Host.HttpListener"
             IDisposable webApplication = WebApp.Start(baseAddress, startup.Configuration);
 
             try
             {
                 Console.WriteLine("Started...");
-
                 Console.ReadKey();
             }
             finally
@@ -40,17 +38,13 @@ namespace Albatross.Example.API
             }
         }
 
-        // This code configures Web API. The Startup class is specified as a type
-        // parameter in the WebApp.Start method.
         public void Configuration(IAppBuilder appBuilder)
         {
-            // Configure Web API for self-host. 
             var config = new HttpConfiguration();
 
-			// Add Unity DependencyResolver
             config.DependencyResolver = new UnityDependencyResolver(UnityHelpers.GetConfiguredContainer());
             GlobalHost.DependencyResolver.Register(typeof(IHubActivator), () => new UnityHubActivator(UnityHelpers.GetConfiguredContainer()));
-			// Add Unity filters provider
+
             RegisterFilterProviders(config);
 
             config.Routes.MapHttpRoute(
@@ -59,7 +53,6 @@ namespace Albatross.Example.API
                 defaults: new { id = RouteParameter.Optional }
             );
 
-            // Web API routes
             config.MapHttpAttributeRoutes();
 
             appBuilder.UseWebApi(config);
@@ -67,9 +60,9 @@ namespace Albatross.Example.API
 
             var hubConfiguration = new HubConfiguration
             {
+                EnableDetailedErrors = true
             };
 
-            hubConfiguration.EnableDetailedErrors = true;
             appBuilder.MapSignalR(hubConfiguration);
         }
 
@@ -77,9 +70,9 @@ namespace Albatross.Example.API
         {
             // Add Unity filters provider
             var providers = config.Services.GetFilterProviders().ToList();
-            config.Services.Add(typeof(System.Web.Http.Filters.IFilterProvider), new WebApiUnityActionFilterProvider(UnityHelpers.GetConfiguredContainer()));
+            config.Services.Add(typeof(IFilterProvider), new WebApiUnityActionFilterProvider(UnityHelpers.GetConfiguredContainer()));
             var defaultprovider = providers.First(p => p is ActionDescriptorFilterProvider);
-            config.Services.Remove(typeof(System.Web.Http.Filters.IFilterProvider), defaultprovider);
+            config.Services.Remove(typeof(IFilterProvider), defaultprovider);
         }
 
     }

@@ -10,7 +10,7 @@ using Microsoft.AspNet.SignalR.Hubs;
 using Microsoft.Practices.Unity;
 using System.Linq;
 
-namespace Albatross.Example.API
+namespace Albatross.Example.API.Config
 {
     public static class UnityHelpers
     {
@@ -34,7 +34,7 @@ namespace Albatross.Example.API
             container.RegisterType<DbContext, ApplicationDbContext>(new HierarchicalLifetimeManager()); 
             container.RegisterType<IRepository<ToDo>, EntityFrameworkRepository<ToDo>>(new TransientLifetimeManager());
             container.RegisterType<IToDoService, ToDoService>(new TransientLifetimeManager());
-            container.RegisterType<MyHub, MyHub>(new ContainerControlledLifetimeManager());
+            container.RegisterType<ToDoHub, ToDoHub>(new ContainerControlledLifetimeManager());
             container.RegisterType<IHubActivator, UnityHubActivator>(new ContainerControlledLifetimeManager());
         }
 

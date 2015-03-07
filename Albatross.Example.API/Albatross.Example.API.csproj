@@ -149,12 +149,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controllers\ToDoController.cs" />
-    <Compile Include="MyHub.cs" />
+    <Compile Include="Hubs\ToDoHub.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Startup.cs" />
-    <Compile Include="UnityHelpers.cs" />
-    <Compile Include="UnityHubActivator.cs" />
+    <Compile Include="Config\Startup.cs" />
+    <Compile Include="Config\UnityHelpers.cs" />
+    <Compile Include="Config\UnityHubActivator.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
