@@ -7,7 +7,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.AspNet.SignalR;
 
-namespace SignalR_Rx_SelfHost_Example
+namespace Albatross.Example.API
 {
     public class MyHub : Hub
     {

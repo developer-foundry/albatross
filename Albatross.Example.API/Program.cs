@@ -11,7 +11,7 @@ using Microsoft.Owin.Cors;
 using Unity.SelfHostWebApiOwin;
 
 
-namespace SignalRSelfHost
+namespace Albatross.Example.API
 {
     public class Program
     {

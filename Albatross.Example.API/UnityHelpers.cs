@@ -5,11 +5,8 @@ using System.Reflection;
 using Microsoft.AspNet.SignalR.Hubs;
 using Microsoft.Practices.Unity;
 using System.Linq;
-using SignalRSelfHost;
-using SignalR_Rx_SelfHost_Example;
-using SignalR_Rx_SelfHost_Example.Unity.SelfHostWebApiOwin;
 
-namespace Unity.SelfHostWebApiOwin
+namespace Albatross.Example.API
 {
     public static class UnityHelpers
     {

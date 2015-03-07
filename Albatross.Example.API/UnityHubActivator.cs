@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNet.SignalR.Hubs;
 using Microsoft.Practices.Unity;
 
-namespace SignalR_Rx_SelfHost_Example.Unity.SelfHostWebApiOwin
+namespace Albatross.Example.API
 {
     public class UnityHubActivator : IHubActivator
     {

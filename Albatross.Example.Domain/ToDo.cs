@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace Albatross.Example.Domain
 {
-    public class Class1
+    public class ToDo
     {
+        public int Id { get; set; }
+        public string Value { get; set; }
     }
 }

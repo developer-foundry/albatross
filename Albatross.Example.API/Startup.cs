@@ -1,3 +1,4 @@
+using Albatross.Example.API;
 using Microsoft.AspNet.SignalR;
 using Microsoft.AspNet.SignalR.Hubs;
 using Microsoft.Owin;
@@ -9,13 +10,11 @@ using System;
 using System.Linq;
 using Microsoft.Practices.Unity;
 using System.Web.Http.Filters;
-using SignalRSelfHost;
-using SignalR_Rx_SelfHost_Example.Unity.SelfHostWebApiOwin;
 using Unity.SelfHostWebApiOwin;
 
 [assembly: OwinStartup(typeof(Startup))]
 
-namespace SignalRSelfHost
+namespace Albatross.Example.API
 {
     public class Startup
     {
