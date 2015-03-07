@@ -39,13 +39,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="Interfaces\IToDoService.cs" />
+    <Compile Include="Services\ToDoService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Albatross.Example.Domain\Albatross.Example.Domain.csproj">
       <Project>{2cbb5a9a-c8e0-4ecd-b74e-88776b16e74c}</Project>
       <Name>Albatross.Example.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Albatross\Albatross.csproj">
+      <Project>{0e9ea18f-8368-4ad3-af86-0b3aaec76323}</Project>
+      <Name>Albatross</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

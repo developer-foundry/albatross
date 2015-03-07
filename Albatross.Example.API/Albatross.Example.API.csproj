@@ -148,6 +148,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controllers\ToDoController.cs" />
     <Compile Include="MyHub.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -167,6 +168,10 @@
     <ProjectReference Include="..\Albatross.Example.Services\Albatross.Example.Services.csproj">
       <Project>{ef45eaab-eee9-4470-b731-60ec61937540}</Project>
       <Name>Albatross.Example.Services</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Albatross\Albatross.csproj">
+      <Project>{0e9ea18f-8368-4ad3-af86-0b3aaec76323}</Project>
+      <Name>Albatross</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

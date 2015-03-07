@@ -2,6 +2,10 @@ using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Reflection;
+using Albatross.Example.Domain;
+using Albatross.Example.Services.Interfaces;
+using Albatross.Example.Services.Services;
+using Albatross.Repositories;
 using Microsoft.AspNet.SignalR.Hubs;
 using Microsoft.Practices.Unity;
 using System.Linq;
@@ -27,10 +31,9 @@ namespace Albatross.Example.API
         public static void RegisterTypes(IUnityContainer container)
         {
             container.RegisterType(typeof(Startup));
-            /*container.RegisterType<DbContext, ApplicationDbContext>(new HierarchicalLifetimeManager()); 
-            container.RegisterType<IRepository, EntityFrameworkRepository>(new TransientLifetimeManager());
-            container.RegisterType<IObservableRepository<Stock>, EntityFrameworkObservableRepository<Stock>>(new TransientLifetimeManager());
-            container.RegisterType<ITickerService, TickerService>(new TransientLifetimeManager());*/
+            container.RegisterType<DbContext, ApplicationDbContext>(new HierarchicalLifetimeManager()); 
+            container.RegisterType<IRepository<ToDo>, EntityFrameworkRepository<ToDo>>(new TransientLifetimeManager());
+            container.RegisterType<IToDoService, ToDoService>(new TransientLifetimeManager());
             container.RegisterType<MyHub, MyHub>(new ContainerControlledLifetimeManager());
             container.RegisterType<IHubActivator, UnityHubActivator>(new ContainerControlledLifetimeManager());
         }
