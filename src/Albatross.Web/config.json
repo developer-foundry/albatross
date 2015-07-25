@@ -1,0 +1,10 @@
+{
+  "AppSettings": {
+    "SiteTitle": "Albatross.Web"
+  },
+  "Data": {
+    "DefaultConnection": {
+      "ConnectionString": "Server=(localdb)\\mssqllocaldb;Database=aspnet5-Albatross.Web-88a46784-aba0-4459-a67b-23cbd9b6dc72;Trusted_Connection=True;MultipleActiveResultSets=true"
+    }
+  }
+}
