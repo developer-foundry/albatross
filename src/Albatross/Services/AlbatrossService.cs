@@ -15,7 +15,7 @@ namespace Albatross.Services
             _repository = repository;
         }
 
-        public IQueryable<T> Get()
+        public IEnumerable<T> Get()
         {
             return _repository.Get();
         }

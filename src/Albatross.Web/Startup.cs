@@ -22,8 +22,6 @@ using Microsoft.Framework.DependencyInjection;
 using Microsoft.Framework.Logging;
 using Microsoft.Framework.Logging.Console;
 using Microsoft.Framework.Runtime;
-using Albatross.Web.Example.Models;
-using Albatross.Web.Example.Services;
 
 namespace Albatross.Web.Example
 {

@@ -15,7 +15,7 @@ namespace Albatross.Repositories
             _dbContext = dbContext;
         }
 
-        public IQueryable<T> Get()
+        public IEnumerable<T> Get()
         {
             return _dbContext.Set<T>();
         }

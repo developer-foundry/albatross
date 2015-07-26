@@ -1,4 +1,4 @@
-﻿{
+{
   "version": "1.0.0-*",
   "description": "Albatross Class Library",
   "authors": [ "Keith" ],
@@ -13,10 +13,11 @@
     "System.Linq": "4.0.0-beta-23019",
     "System.Threading": "4.0.10-beta-23019",
     "System.Runtime": "4.0.10-beta-23019",
-    "Microsoft.CSharp": "4.0.0-beta-23019"
+    "Microsoft.CSharp": "4.0.0-beta-23019",
+    "rethinkdb-net": "0.11.0"
   },
 
   "frameworks": {
-     "dnx451": { }
+    "dnx451": { }
   }
 }

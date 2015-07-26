@@ -705,12 +705,31 @@
           "lib/net45/Newtonsoft.Json.dll": {}
         }
       },
+      "protobuf-net/2.0.0.666": {
+        "compile": {
+          "lib/net40/protobuf-net.dll": {}
+        },
+        "runtime": {
+          "lib/net40/protobuf-net.dll": {}
+        }
+      },
       "Remotion.Linq/2.0.0-alpha-002": {
         "compile": {
           "lib/portable-net45+win+wpa81+wp80/Remotion.Linq.dll": {}
         },
         "runtime": {
           "lib/portable-net45+win+wpa81+wp80/Remotion.Linq.dll": {}
+        }
+      },
+      "rethinkdb-net/0.11.0.0": {
+        "dependencies": {
+          "protobuf-net": "2.0.0.666"
+        },
+        "compile": {
+          "lib/net45/RethinkDb.dll": {}
+        },
+        "runtime": {
+          "lib/net45/RethinkDb.dll": {}
         }
       },
       "System.Collections/4.0.10-beta-23019": {
@@ -1371,6 +1390,54 @@
         "tools/install.ps1"
       ]
     },
+    "protobuf-net/2.0.0.666": {
+      "sha512": "TB15rCsNU7WyCNJwAO9G8SjXmX9Vw348TTLGsu07XRB2c6JB9GDzaTrqYjRi/kQmk4TT0fS/5sd0eglLsYafsg==",
+      "files": [
+        "protobuf-net.2.0.0.666.nupkg",
+        "protobuf-net.2.0.0.666.nupkg.sha512",
+        "protobuf-net.nuspec",
+        "lib/net20/protobuf-net.dll",
+        "lib/net20/protobuf-net.pdb",
+        "lib/net20/protobuf-net.xml",
+        "lib/net20-cf/protobuf-net.dll",
+        "lib/net20-cf/protobuf-net.pdb",
+        "lib/net20-cf/protobuf-net.xml",
+        "lib/net30/protobuf-net.dll",
+        "lib/net30/protobuf-net.pdb",
+        "lib/net30/protobuf-net.xml",
+        "lib/net35/protobuf-net.dll",
+        "lib/net35/protobuf-net.pdb",
+        "lib/net35/protobuf-net.xml",
+        "lib/net35-cf/protobuf-net.dll",
+        "lib/net35-cf/protobuf-net.pdb",
+        "lib/net35-cf/protobuf-net.xml",
+        "lib/net40/protobuf-net.dll",
+        "lib/net40/protobuf-net.pdb",
+        "lib/net40/protobuf-net.xml",
+        "lib/net40-cf/protobuf-net.dll",
+        "lib/net40-cf/protobuf-net.pdb",
+        "lib/net40-cf/protobuf-net.xml",
+        "lib/netcore45/protobuf-net.dll",
+        "lib/netcore45/protobuf-net.pdb",
+        "lib/netcore45/protobuf-net.pri",
+        "lib/netcore45/protobuf-net.XML",
+        "lib/portable-sl4+net40+wp7+windows8/protobuf-net.dll",
+        "lib/portable-sl4+net40+wp7+windows8/protobuf-net.pdb",
+        "lib/portable-sl4+net40+wp7+windows8/protobuf-net.xml",
+        "lib/sl3-wp/protobuf-net.dll",
+        "lib/sl3-wp/protobuf-net.pdb",
+        "lib/sl3-wp/protobuf-net.xml",
+        "lib/sl4/protobuf-net.dll",
+        "lib/sl4/protobuf-net.pdb",
+        "lib/sl4/protobuf-net.xml",
+        "lib/sl4-windowsphone71/protobuf-net.dll",
+        "lib/sl4-windowsphone71/protobuf-net.pdb",
+        "lib/sl4-windowsphone71/protobuf-net.xml",
+        "lib/windowsphone8/protobuf-net.dll",
+        "lib/windowsphone8/protobuf-net.pdb",
+        "lib/windowsphone8/protobuf-net.xml"
+      ]
+    },
     "Remotion.Linq/2.0.0-alpha-002": {
       "sha512": "7vNxTm6wl76ck2VcfWM4eVOL61zwFSUtm4uniJ0S/YPea53e7V1b8tdGZMivhRo6lCvLhK9FQ32yU59zHMBhXg==",
       "files": [
@@ -1379,6 +1446,19 @@
         "Remotion.Linq.nuspec",
         "lib/portable-net45+win+wpa81+wp80/Remotion.Linq.dll",
         "lib/portable-net45+win+wpa81+wp80/Remotion.Linq.xml"
+      ]
+    },
+    "rethinkdb-net/0.11.0.0": {
+      "sha512": "rQknPf1Iul3qpeWUtk8tjJONjibqsiNxKpzm83P+0KGPHSbsEdQ77tMJ2edp+v8vf0BpppmOP6tTXoeIeWevQw==",
+      "files": [
+        "rethinkdb-net.0.11.0.0.nupkg",
+        "rethinkdb-net.0.11.0.0.nupkg.sha512",
+        "rethinkdb-net.nuspec",
+        "lib/LICENSE.txt",
+        "lib/README.md",
+        "lib/RELEASE-NOTES.md",
+        "lib/net45/RethinkDb.dll",
+        "lib/net45/RethinkDb.dll.mdb"
       ]
     },
     "System.Collections/4.0.10-beta-23019": {
@@ -1488,7 +1568,8 @@
       "System.Linq >= 4.0.0-beta-23019",
       "System.Threading >= 4.0.10-beta-23019",
       "System.Runtime >= 4.0.10-beta-23019",
-      "Microsoft.CSharp >= 4.0.0-beta-23019"
+      "Microsoft.CSharp >= 4.0.0-beta-23019",
+      "rethinkdb-net >= 0.11.0"
     ],
     "DNX,Version=v4.5.1": []
   }

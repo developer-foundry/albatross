@@ -7,7 +7,7 @@ namespace Albatross.Repositories
 {
     public interface IAlbatrossRepository<T> where T : class
     {
-        IQueryable<T> Get();
+        IEnumerable<T> Get();
         void Create(T item);
         void Create(IEnumerable<T> items);
         void Update(T item);
