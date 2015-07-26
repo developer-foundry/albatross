@@ -10,7 +10,7 @@ namespace Albatross.Services
     {
         private readonly IAlbatrossRepository<T> _repository;
 
-        protected AlbatrossService(IAlbatrossRepository<T> repository)
+        public AlbatrossService(IAlbatrossRepository<T> repository)
         {
             _repository = repository;
         }

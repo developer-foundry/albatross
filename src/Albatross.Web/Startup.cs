@@ -2,8 +2,12 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Albatross.Configuration;
+using Albatross.Repositories;
+using Albatross.Services;
 using Albatross.Web.Example.Models;
 using Albatross.Web.Example.Services;
+using Albatross.Web.Models;
 using Microsoft.AspNet.Authentication.Facebook;
 using Microsoft.AspNet.Authentication.Google;
 using Microsoft.AspNet.Authentication.MicrosoftAccount;
@@ -86,6 +90,11 @@ namespace Albatross.Web.Example
             // Register application services.
             services.AddTransient<IEmailSender, AuthMessageSender>();
             services.AddTransient<ISmsSender, AuthMessageSender>();
+
+            //Albatross Configuration
+            services.Configure<RethinkConfiguration>(Configuration.GetConfigurationSection("Rethink"));
+            services.AddScoped<IAlbatrossRepository<ToDo>, ReThinkDbRepository<ToDo>>();
+            services.AddScoped<IAlbatrossService<ToDo>, AlbatrossService<ToDo>>();
         }
 
         // Configure is called after ConfigureServices is called.

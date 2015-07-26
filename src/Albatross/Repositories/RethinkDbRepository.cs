@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Net;
 using System.Threading.Tasks;
+using Albatross.Configuration;
+using Microsoft.Framework.Configuration;
+using Microsoft.Framework.OptionsModel;
 using RethinkDb;
 using RethinkDb.Configuration;
 using RethinkDb.ConnectionFactories;
@@ -15,14 +18,15 @@ namespace Albatross.Repositories
         private readonly ITableQuery<T> _table;
         private readonly IConnectionFactory _connectionFactory;
         private readonly IConnection _conn;
-        public ReThinkDbRepository(string databaseName)
+
+        public ReThinkDbRepository(IOptions<RethinkConfiguration> settings)
         {
-            _db = Query.Db(databaseName);
+            _db = Query.Db(settings.Options.Database);
             _table = _db.Table<T>(typeof (T).Name.ToLower());
             _connectionFactory = new DefaultConnectionFactory(
                 new List<EndPoint>()
                 {
-                    new IPEndPoint(IPAddress.Parse("192.168.59.103"), 49153)
+                    new IPEndPoint(IPAddress.Parse(settings.Options.IpAddress), settings.Options.Port)
                 });
             _conn = _connectionFactory.Get();
         }

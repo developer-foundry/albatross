@@ -2,26 +2,29 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Albatross.Configuration;
 using Albatross.Repositories;
+using Albatross.Services;
 using Albatross.Web.Models;
 using Microsoft.AspNet.Mvc;
+using Microsoft.Framework.OptionsModel;
 
 namespace Albatross.Web.Controllers
 {
     [Route("api/todo")]
     public class ToDoController : Controller
     {
-        private readonly IAlbatrossRepository<ToDo> _repository;
+        private readonly IAlbatrossService<ToDo> _toDoService;
 
-        public ToDoController()
+        public ToDoController(IAlbatrossService<ToDo> toDoService)
         {
-            _repository = new ReThinkDbRepository<ToDo>("albatross");
+            _toDoService = toDoService;
         }
 
         [HttpGet]
         public IActionResult Get()
         {
-            return new JsonResult(_repository.Get());
+            return new JsonResult(_toDoService.Get());
         }
     }
 }
