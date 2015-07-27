@@ -132,6 +132,62 @@
           "lib/net45/System.Interactive.Async.dll": {}
         }
       },
+      "Microsoft.AspNet.Cryptography.Internal/1.0.0-beta5": {
+        "frameworkAssemblies": [
+          "mscorlib",
+          "System",
+          "System.Core",
+          "Microsoft.CSharp"
+        ],
+        "compile": {
+          "lib/dnx451/Microsoft.AspNet.Cryptography.Internal.dll": {}
+        },
+        "runtime": {
+          "lib/dnx451/Microsoft.AspNet.Cryptography.Internal.dll": {}
+        }
+      },
+      "Microsoft.AspNet.DataProtection/1.0.0-beta5": {
+        "dependencies": {
+          "Microsoft.AspNet.Cryptography.Internal": "1.0.0-beta5",
+          "Microsoft.AspNet.DataProtection.Abstractions": "1.0.0-beta5",
+          "Microsoft.Framework.DependencyInjection.Abstractions": "1.0.0-beta5",
+          "Microsoft.Framework.Logging.Abstractions": "1.0.0-beta5",
+          "Microsoft.Framework.OptionsModel": "1.0.0-beta5"
+        },
+        "frameworkAssemblies": [
+          "System.IO",
+          "System.Security",
+          "System.Xml",
+          "System.Xml.Linq",
+          "mscorlib",
+          "System",
+          "System.Core",
+          "Microsoft.CSharp"
+        ],
+        "compile": {
+          "lib/dnx451/Microsoft.AspNet.DataProtection.dll": {}
+        },
+        "runtime": {
+          "lib/dnx451/Microsoft.AspNet.DataProtection.dll": {}
+        }
+      },
+      "Microsoft.AspNet.DataProtection.Abstractions/1.0.0-beta5": {
+        "dependencies": {
+          "Microsoft.Framework.Runtime.Abstractions": "1.0.0-beta5"
+        },
+        "frameworkAssemblies": [
+          "mscorlib",
+          "System",
+          "System.Core",
+          "Microsoft.CSharp"
+        ],
+        "compile": {
+          "lib/dnx451/Microsoft.AspNet.DataProtection.Abstractions.dll": {}
+        },
+        "runtime": {
+          "lib/dnx451/Microsoft.AspNet.DataProtection.Abstractions.dll": {}
+        }
+      },
       "Microsoft.AspNet.FeatureModel/1.0.0-beta5": {
         "frameworkAssemblies": [
           "mscorlib",
@@ -329,6 +385,47 @@
         },
         "runtime": {
           "lib/dnx451/Microsoft.AspNet.Razor.dll": {}
+        }
+      },
+      "Microsoft.AspNet.SignalR.Messaging/3.0.0-beta5": {
+        "dependencies": {
+          "Microsoft.Framework.Logging": "1.0.0-beta5",
+          "Microsoft.Framework.OptionsModel": "1.0.0-beta5"
+        },
+        "frameworkAssemblies": [
+          "mscorlib",
+          "System",
+          "System.Core",
+          "Microsoft.CSharp"
+        ],
+        "compile": {
+          "lib/dnx451/Microsoft.AspNet.SignalR.Messaging.dll": {}
+        },
+        "runtime": {
+          "lib/dnx451/Microsoft.AspNet.SignalR.Messaging.dll": {}
+        }
+      },
+      "Microsoft.AspNet.SignalR.Server/3.0.0-beta5": {
+        "dependencies": {
+          "Microsoft.AspNet.SignalR.Messaging": "3.0.0-beta5",
+          "Microsoft.AspNet.DataProtection": "1.0.0-beta5",
+          "Microsoft.AspNet.Hosting.Abstractions": "1.0.0-beta5",
+          "Microsoft.AspNet.Http.Extensions": "1.0.0-beta5",
+          "Microsoft.Framework.Logging": "1.0.0-beta5",
+          "Microsoft.Framework.Runtime.Abstractions": "1.0.0-beta5",
+          "Newtonsoft.Json": "6.0.6"
+        },
+        "frameworkAssemblies": [
+          "mscorlib",
+          "System",
+          "System.Core",
+          "Microsoft.CSharp"
+        ],
+        "compile": {
+          "lib/dnx451/Microsoft.AspNet.SignalR.Server.dll": {}
+        },
+        "runtime": {
+          "lib/dnx451/Microsoft.AspNet.SignalR.Server.dll": {}
         }
       },
       "Microsoft.AspNet.WebUtilities/1.0.0-beta5": {
@@ -924,6 +1021,51 @@
         "lib/portable-net45+netcore45+wpa81+wp8+MonoAndroid1+MonoTouch1/System.Interactive.Async.XML"
       ]
     },
+    "Microsoft.AspNet.Cryptography.Internal/1.0.0-beta5": {
+      "serviceable": true,
+      "sha512": "nhCP9Q0TSA3F31w+SXoXh5X9zbGRpyGZrkBhid++k673Mxg1uzkDNa18Z0edF7Yiua2ZHZeA/GPkPUG0pzER/A==",
+      "files": [
+        "Microsoft.AspNet.Cryptography.Internal.1.0.0-beta5.nupkg",
+        "Microsoft.AspNet.Cryptography.Internal.1.0.0-beta5.nupkg.sha512",
+        "Microsoft.AspNet.Cryptography.Internal.nuspec",
+        "lib/dnx451/Microsoft.AspNet.Cryptography.Internal.dll",
+        "lib/dnx451/Microsoft.AspNet.Cryptography.Internal.xml",
+        "lib/dnxcore50/Microsoft.AspNet.Cryptography.Internal.dll",
+        "lib/dnxcore50/Microsoft.AspNet.Cryptography.Internal.xml",
+        "lib/net451/Microsoft.AspNet.Cryptography.Internal.dll",
+        "lib/net451/Microsoft.AspNet.Cryptography.Internal.xml"
+      ]
+    },
+    "Microsoft.AspNet.DataProtection/1.0.0-beta5": {
+      "serviceable": true,
+      "sha512": "f8oqJIyHUbmsIkgEq+A7QQOKr60s4GoewR2I+ItHGuHdwV6ICuNnu4yKSx7v0k/uh51T49ECcrrMApUepuV2mg==",
+      "files": [
+        "Microsoft.AspNet.DataProtection.1.0.0-beta5.nupkg",
+        "Microsoft.AspNet.DataProtection.1.0.0-beta5.nupkg.sha512",
+        "Microsoft.AspNet.DataProtection.nuspec",
+        "lib/dnx451/Microsoft.AspNet.DataProtection.dll",
+        "lib/dnx451/Microsoft.AspNet.DataProtection.xml",
+        "lib/dnxcore50/Microsoft.AspNet.DataProtection.dll",
+        "lib/dnxcore50/Microsoft.AspNet.DataProtection.xml",
+        "lib/net451/Microsoft.AspNet.DataProtection.dll",
+        "lib/net451/Microsoft.AspNet.DataProtection.xml"
+      ]
+    },
+    "Microsoft.AspNet.DataProtection.Abstractions/1.0.0-beta5": {
+      "serviceable": true,
+      "sha512": "Ow8W+rMtA0rsiCtvHtUs+f5wrzMj0rtoSjl+vTgtGNQ0Ib+3tsGbKgA9+l5kzGKG6RUebnCK+vXKP/zCXDZOvw==",
+      "files": [
+        "Microsoft.AspNet.DataProtection.Abstractions.1.0.0-beta5.nupkg",
+        "Microsoft.AspNet.DataProtection.Abstractions.1.0.0-beta5.nupkg.sha512",
+        "Microsoft.AspNet.DataProtection.Abstractions.nuspec",
+        "lib/dnx451/Microsoft.AspNet.DataProtection.Abstractions.dll",
+        "lib/dnx451/Microsoft.AspNet.DataProtection.Abstractions.xml",
+        "lib/dnxcore50/Microsoft.AspNet.DataProtection.Abstractions.dll",
+        "lib/dnxcore50/Microsoft.AspNet.DataProtection.Abstractions.xml",
+        "lib/net451/Microsoft.AspNet.DataProtection.Abstractions.dll",
+        "lib/net451/Microsoft.AspNet.DataProtection.Abstractions.xml"
+      ]
+    },
     "Microsoft.AspNet.FeatureModel/1.0.0-beta5": {
       "serviceable": true,
       "sha512": "M6ltNGrh4gHU+DiMbV074ZDwDQAIYx1SEOlltX7XzKbiDztYuTAtXiv8M/wkjZBeVdkszkE0NPOlMb/pbfww6g==",
@@ -1070,6 +1212,32 @@
         "lib/dnxcore50/Microsoft.AspNet.Razor.xml",
         "lib/net45/Microsoft.AspNet.Razor.dll",
         "lib/net45/Microsoft.AspNet.Razor.xml"
+      ]
+    },
+    "Microsoft.AspNet.SignalR.Messaging/3.0.0-beta5": {
+      "serviceable": true,
+      "sha512": "ZZ+qD3dd+kj92/Qd3/auMwOQNiEb0T7UNskyTHy7UQNGbvTKRLgAvh8o3+CntKryIaRv8sjmoQ8Zm1YOKiREcg==",
+      "files": [
+        "Microsoft.AspNet.SignalR.Messaging.3.0.0-beta5.nupkg",
+        "Microsoft.AspNet.SignalR.Messaging.3.0.0-beta5.nupkg.sha512",
+        "Microsoft.AspNet.SignalR.Messaging.nuspec",
+        "lib/dnx451/Microsoft.AspNet.SignalR.Messaging.dll",
+        "lib/dnx451/Microsoft.AspNet.SignalR.Messaging.xml",
+        "lib/dnxcore50/Microsoft.AspNet.SignalR.Messaging.dll",
+        "lib/dnxcore50/Microsoft.AspNet.SignalR.Messaging.xml"
+      ]
+    },
+    "Microsoft.AspNet.SignalR.Server/3.0.0-beta5": {
+      "serviceable": true,
+      "sha512": "0cSHaFNHirLgIu/3xh2jlacviexvJjb1UPAU9A3Kjupg72ietr2SA9Y7eCCE11RLMbF1mUS5oa0I5soKltDoFg==",
+      "files": [
+        "Microsoft.AspNet.SignalR.Server.3.0.0-beta5.nupkg",
+        "Microsoft.AspNet.SignalR.Server.3.0.0-beta5.nupkg.sha512",
+        "Microsoft.AspNet.SignalR.Server.nuspec",
+        "lib/dnx451/Microsoft.AspNet.SignalR.Server.dll",
+        "lib/dnx451/Microsoft.AspNet.SignalR.Server.xml",
+        "lib/dnxcore50/Microsoft.AspNet.SignalR.Server.dll",
+        "lib/dnxcore50/Microsoft.AspNet.SignalR.Server.xml"
       ]
     },
     "Microsoft.AspNet.WebUtilities/1.0.0-beta5": {
@@ -1741,7 +1909,8 @@
       "System.Runtime >= 4.0.10-beta-23019",
       "Microsoft.CSharp >= 4.0.0-beta-23019",
       "rethinkdb-net >= 0.11.0",
-      "Rx-Main >= 2.2.5"
+      "Rx-Main >= 2.2.5",
+      "Microsoft.AspNet.SignalR.Server >= 3.0.0-beta5"
     ],
     "DNX,Version=v4.5.1": []
   }

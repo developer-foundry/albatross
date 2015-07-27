@@ -27,7 +27,8 @@
         "Microsoft.Framework.Logging.Console": "1.0.0-beta5",
         "Microsoft.VisualStudio.Web.BrowserLink.Loader": "14.0.0-beta5",
         "Albatross": "1.0.0-*",
-        "Rx-Main": "2.2.5"
+        "Rx-Main": "2.2.5",
+        "Microsoft.AspNet.SignalR.Server": "3.0.0-beta5"
     },
 
     "commands": {

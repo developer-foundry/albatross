@@ -99,6 +99,8 @@ namespace Albatross.Web.Example
             services.AddScoped<IAlbatrossRepository<ToDo>, RethinkDbRepository<ToDo>>();
             services.AddScoped<IAlbatrossObservableService<ToDo>, AlbatrossObservableService<ToDo>>();
             services.AddScoped<IAlbatrossService<ToDo>, AlbatrossService<ToDo>>();
+
+            services.AddSignalR();
         }
 
         // Configure is called after ConfigureServices is called.

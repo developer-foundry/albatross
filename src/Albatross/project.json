@@ -1,24 +1,25 @@
 {
-  "version": "1.0.0-*",
-  "description": "Albatross Class Library",
-  "authors": [ "Keith" ],
-  "tags": [ "" ],
-  "projectUrl": "",
-  "licenseUrl": "",
+    "version": "1.0.0-*",
+    "description": "Albatross Class Library",
+    "authors": [ "Keith" ],
+    "tags": [ "" ],
+    "projectUrl": "",
+    "licenseUrl": "",
 
-  "dependencies": {
-    "EntityFramework.SqlServer": "7.0.0-beta5",
-    "EntityFramework.Commands": "7.0.0-beta5",
-    "System.Collections": "4.0.10-beta-23019",
-    "System.Linq": "4.0.0-beta-23019",
-    "System.Threading": "4.0.10-beta-23019",
-    "System.Runtime": "4.0.10-beta-23019",
-    "Microsoft.CSharp": "4.0.0-beta-23019",
-    "rethinkdb-net": "0.11.0",
-    "Rx-Main": "2.2.5"
-  },
+    "dependencies": {
+        "EntityFramework.SqlServer": "7.0.0-beta5",
+        "EntityFramework.Commands": "7.0.0-beta5",
+        "System.Collections": "4.0.10-beta-23019",
+        "System.Linq": "4.0.0-beta-23019",
+        "System.Threading": "4.0.10-beta-23019",
+        "System.Runtime": "4.0.10-beta-23019",
+        "Microsoft.CSharp": "4.0.0-beta-23019",
+        "rethinkdb-net": "0.11.0",
+        "Rx-Main": "2.2.5",
+        "Microsoft.AspNet.SignalR.Server": "3.0.0-beta5"
+    },
 
-  "frameworks": {
-    "dnx451": { }
-  }
+    "frameworks": {
+        "dnx451": { }
+    }
 }

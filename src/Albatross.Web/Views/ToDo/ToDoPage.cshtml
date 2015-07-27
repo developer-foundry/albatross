@@ -1,0 +1,31 @@
+﻿@model dynamic
+
+@{
+    ViewBag.Title = "title";
+    Layout = "_Layout";
+}
+
+<div class="container">
+    
+</div>
+@section scripts {
+    <!--Script references. -->
+    <!--The jQuery library is required and is referenced by default in _Layout.cshtml. -->
+    <!--Reference the SignalR library. -->
+    <script src="~/lib/signalr/jquery.signalR.js"></script>
+    <script src="~/signalr/hubs" type="text/javascript"></script>
+    <script>
+        $(function () {
+            // Reference the auto-generated proxy for the hub.
+            var toDoHub = $.connection.toDoHub;
+            // Create a function that the hub can call back to display messages.
+            toDoHub.client.Created = function (created) {
+                console.log(created);
+            };
+
+            $.connection.hub.start().done(function () {
+                
+            });
+        });
+    </script>
+}
