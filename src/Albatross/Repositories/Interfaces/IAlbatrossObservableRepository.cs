@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Albatross.Repositories
+namespace Albatross.Repositories.Interfaces
 {
-    public interface IAlbatrossRepository<T> where T : class
+    public interface IAlbatrossObservableRepository<T> where T : class
     {
-        IEnumerable<T> Get();
+        IObservable<T> Get();
         void Create(T item);
         void Create(IEnumerable<T> items);
         void Update(T item);

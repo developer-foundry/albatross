@@ -2,22 +2,21 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Albatross.Repositories;
 using Albatross.Repositories.Interfaces;
 using Albatross.Services.Interfaces;
 
 namespace Albatross.Services
 {
-    public class AlbatrossService<T> : IAlbatrossService<T> where T : class
+    public class AlbatrossObservableService<T> : IAlbatrossObservableService<T> where T : class
     {
-        private readonly IAlbatrossRepository<T> _repository;
+        private readonly IAlbatrossObservableRepository<T> _repository;
 
-        public AlbatrossService(IAlbatrossRepository<T> repository)
+        public AlbatrossObservableService(IAlbatrossObservableRepository<T> repository)
         {
             _repository = repository;
         }
 
-        public IEnumerable<T> Get()
+        public IObservable<T> Get()
         {
             return _repository.Get();
         }

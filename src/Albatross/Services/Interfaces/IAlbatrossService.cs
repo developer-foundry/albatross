@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Albatross.Services
+namespace Albatross.Services.Interfaces
 {
     public interface IAlbatrossService<T> where T : class
     {

@@ -26,7 +26,8 @@
         "Microsoft.Framework.Logging": "1.0.0-beta5",
         "Microsoft.Framework.Logging.Console": "1.0.0-beta5",
         "Microsoft.VisualStudio.Web.BrowserLink.Loader": "14.0.0-beta5",
-        "Albatross": "1.0.0-*"
+        "Albatross": "1.0.0-*",
+        "Rx-Main": "2.2.5"
     },
 
     "commands": {

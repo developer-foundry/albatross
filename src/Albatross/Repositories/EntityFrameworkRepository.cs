@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Albatross.Repositories.Interfaces;
 using Microsoft.Data.Entity;
 
 namespace Albatross.Repositories
