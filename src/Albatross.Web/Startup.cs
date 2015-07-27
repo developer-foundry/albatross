@@ -95,8 +95,10 @@ namespace Albatross.Web.Example
 
             //Albatross Configuration
             services.Configure<RethinkConfiguration>(Configuration.GetConfigurationSection("Rethink"));
-            services.AddScoped<IAlbatrossObservableRepository<ToDo>, RethinkDbRepository<ToDo>>();
+            services.AddScoped<IAlbatrossObservableRepository<ToDo>, RethinkDbObservableRepository<ToDo>>();
+            services.AddScoped<IAlbatrossRepository<ToDo>, RethinkDbRepository<ToDo>>();
             services.AddScoped<IAlbatrossObservableService<ToDo>, AlbatrossObservableService<ToDo>>();
+            services.AddScoped<IAlbatrossService<ToDo>, AlbatrossService<ToDo>>();
         }
 
         // Configure is called after ConfigureServices is called.

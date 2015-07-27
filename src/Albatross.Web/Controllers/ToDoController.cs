@@ -15,9 +15,9 @@ namespace Albatross.Web.Controllers
     [Route("api/todo")]
     public class ToDoController : Controller
     {
-        private readonly IAlbatrossObservableService<ToDo> _toDoService;
+        private readonly IAlbatrossService<ToDo> _toDoService;
 
-        public ToDoController(IAlbatrossObservableService<ToDo> toDoService)
+        public ToDoController(IAlbatrossService<ToDo> toDoService)
         {
             _toDoService = toDoService;
         }
