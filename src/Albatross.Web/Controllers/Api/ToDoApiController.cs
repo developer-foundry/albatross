@@ -10,7 +10,7 @@ using Albatross.Web.Models;
 using Microsoft.AspNet.Mvc;
 using Microsoft.Framework.OptionsModel;
 
-namespace Albatross.Web.Controllers
+namespace Albatross.Web.Controllers.Api
 {
     [Route("api/todo")]
     public class ToDoApiController : Controller
