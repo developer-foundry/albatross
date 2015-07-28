@@ -16,7 +16,8 @@
         "Microsoft.CSharp": "4.0.0-beta-23019",
         "rethinkdb-net": "0.11.0",
         "Rx-Main": "2.2.5",
-        "Microsoft.AspNet.SignalR.Server": "3.0.0-beta5"
+        "Microsoft.AspNet.SignalR.Server": "3.0.0-beta5",
+        "Microsoft.AspNet.Mvc.Abstractions": "6.0.0-beta5"
     },
 
     "frameworks": {

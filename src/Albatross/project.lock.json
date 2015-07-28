@@ -373,6 +373,23 @@
           "lib/dnx451/Microsoft.AspNet.Http.Features.dll": {}
         }
       },
+      "Microsoft.AspNet.Mvc.Abstractions/6.0.0-beta5": {
+        "dependencies": {
+          "Microsoft.AspNet.Routing": "1.0.0-beta5"
+        },
+        "frameworkAssemblies": [
+          "mscorlib",
+          "System",
+          "System.Core",
+          "Microsoft.CSharp"
+        ],
+        "compile": {
+          "lib/dnx451/Microsoft.AspNet.Mvc.Abstractions.dll": {}
+        },
+        "runtime": {
+          "lib/dnx451/Microsoft.AspNet.Mvc.Abstractions.dll": {}
+        }
+      },
       "Microsoft.AspNet.Razor/4.0.0-beta5": {
         "frameworkAssemblies": [
           "mscorlib",
@@ -385,6 +402,25 @@
         },
         "runtime": {
           "lib/dnx451/Microsoft.AspNet.Razor.dll": {}
+        }
+      },
+      "Microsoft.AspNet.Routing/1.0.0-beta5": {
+        "dependencies": {
+          "Microsoft.AspNet.Http.Extensions": "1.0.0-beta5",
+          "Microsoft.Framework.Logging.Abstractions": "1.0.0-beta5",
+          "Microsoft.Framework.OptionsModel": "1.0.0-beta5"
+        },
+        "frameworkAssemblies": [
+          "mscorlib",
+          "System",
+          "System.Core",
+          "Microsoft.CSharp"
+        ],
+        "compile": {
+          "lib/dnx451/Microsoft.AspNet.Routing.dll": {}
+        },
+        "runtime": {
+          "lib/dnx451/Microsoft.AspNet.Routing.dll": {}
         }
       },
       "Microsoft.AspNet.SignalR.Messaging/3.0.0-beta5": {
@@ -1199,6 +1235,19 @@
         "lib/dnxcore50/Microsoft.AspNet.Http.Features.xml"
       ]
     },
+    "Microsoft.AspNet.Mvc.Abstractions/6.0.0-beta5": {
+      "serviceable": true,
+      "sha512": "JLWuTusgDA2pV/2hUjX4LQojuEhOzqQNUxy4tyunxIa1w6eqd0lAaLV/2FHOOa0qxiqigjT+IdDNH3wgNO2mug==",
+      "files": [
+        "Microsoft.AspNet.Mvc.Abstractions.6.0.0-beta5.nupkg",
+        "Microsoft.AspNet.Mvc.Abstractions.6.0.0-beta5.nupkg.sha512",
+        "Microsoft.AspNet.Mvc.Abstractions.nuspec",
+        "lib/dnx451/Microsoft.AspNet.Mvc.Abstractions.dll",
+        "lib/dnx451/Microsoft.AspNet.Mvc.Abstractions.xml",
+        "lib/dnxcore50/Microsoft.AspNet.Mvc.Abstractions.dll",
+        "lib/dnxcore50/Microsoft.AspNet.Mvc.Abstractions.xml"
+      ]
+    },
     "Microsoft.AspNet.Razor/4.0.0-beta5": {
       "serviceable": true,
       "sha512": "fTXEgjN67pPALkugzzlh11tb1Nl1voAAuJons5d+gYNI45ILMDsGeYIXzJDwXPnzeB83QpTBjceSSKiTBKgYNA==",
@@ -1212,6 +1261,19 @@
         "lib/dnxcore50/Microsoft.AspNet.Razor.xml",
         "lib/net45/Microsoft.AspNet.Razor.dll",
         "lib/net45/Microsoft.AspNet.Razor.xml"
+      ]
+    },
+    "Microsoft.AspNet.Routing/1.0.0-beta5": {
+      "serviceable": true,
+      "sha512": "mW3oegs4IFBs8gz/Vx8XMFACdnVm35Iu6vUWitJuACcVrMHm9ogUkWAzN5oCNeyZCVBnYmV8aXuFEYA00qBMiA==",
+      "files": [
+        "Microsoft.AspNet.Routing.1.0.0-beta5.nupkg",
+        "Microsoft.AspNet.Routing.1.0.0-beta5.nupkg.sha512",
+        "Microsoft.AspNet.Routing.nuspec",
+        "lib/dnx451/Microsoft.AspNet.Routing.dll",
+        "lib/dnx451/Microsoft.AspNet.Routing.xml",
+        "lib/dnxcore50/Microsoft.AspNet.Routing.dll",
+        "lib/dnxcore50/Microsoft.AspNet.Routing.xml"
       ]
     },
     "Microsoft.AspNet.SignalR.Messaging/3.0.0-beta5": {
@@ -1910,7 +1972,8 @@
       "Microsoft.CSharp >= 4.0.0-beta-23019",
       "rethinkdb-net >= 0.11.0",
       "Rx-Main >= 2.2.5",
-      "Microsoft.AspNet.SignalR.Server >= 3.0.0-beta5"
+      "Microsoft.AspNet.SignalR.Server >= 3.0.0-beta5",
+      "Microsoft.AspNet.Mvc.Abstractions >= 6.0.0-beta5"
     ],
     "DNX,Version=v4.5.1": []
   }

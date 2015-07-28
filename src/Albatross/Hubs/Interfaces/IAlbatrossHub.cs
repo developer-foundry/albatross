@@ -7,8 +7,8 @@ namespace Albatross.Hubs.Interfaces
 {
     public interface IAlbatrossHub<T> where T : class
     {
-        void Created(T created);
-        void Deleted(T deleted);
-        void Updated(T updated);
+        void Create(T item);
+        void Delete(T item);
+        void Update(T item);
     }
 }
