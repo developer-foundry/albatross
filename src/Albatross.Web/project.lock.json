@@ -1093,9 +1093,10 @@
           "Microsoft.CSharp"
         ]
       },
-      "Microsoft.Framework.ApplicationHost/1.0.0-beta3": {
+      "Microsoft.Framework.ApplicationHost/1.0.0-beta5": {
         "dependencies": {
-          "Microsoft.Framework.Runtime": "1.0.0-beta3"
+          "Microsoft.Framework.Runtime": "1.0.0-beta5",
+          "Microsoft.Framework.Runtime.Abstractions": "1.0.0-beta5"
         },
         "frameworkAssemblies": [
           "mscorlib",
@@ -1104,10 +1105,10 @@
           "Microsoft.CSharp"
         ],
         "compile": {
-          "lib/aspnet50/Microsoft.Framework.ApplicationHost.dll": {}
+          "lib/dnx451/Microsoft.Framework.ApplicationHost.dll": {}
         },
         "runtime": {
-          "lib/aspnet50/Microsoft.Framework.ApplicationHost.dll": {}
+          "lib/dnx451/Microsoft.Framework.ApplicationHost.dll": {}
         }
       },
       "Microsoft.Framework.Caching.Abstractions/1.0.0-beta5": {
@@ -1143,7 +1144,7 @@
           "lib/dnx451/Microsoft.Framework.Caching.Memory.dll": {}
         }
       },
-      "Microsoft.Framework.CommandLineUtils/1.0.0-beta3": {
+      "Microsoft.Framework.CommandLineUtils.Sources/1.0.0-beta5": {
         "frameworkAssemblies": [
           "mscorlib",
           "System",
@@ -1151,10 +1152,10 @@
           "Microsoft.CSharp"
         ],
         "compile": {
-          "lib/aspnet50/Microsoft.Framework.CommandLineUtils.dll": {}
+          "lib/dnx451/Microsoft.Framework.CommandLineUtils.Sources.dll": {}
         },
         "runtime": {
-          "lib/aspnet50/Microsoft.Framework.CommandLineUtils.dll": {}
+          "lib/dnx451/Microsoft.Framework.CommandLineUtils.Sources.dll": {}
         }
       },
       "Microsoft.Framework.Configuration/1.0.0-beta5": {
@@ -1405,14 +1406,16 @@
           "lib/dnx451/Microsoft.Framework.OptionsModel.dll": {}
         }
       },
-      "Microsoft.Framework.Runtime/1.0.0-beta3": {
+      "Microsoft.Framework.Runtime/1.0.0-beta5": {
         "dependencies": {
-          "System.Reflection.Metadata": "1.0.17-beta",
-          "Microsoft.Framework.Runtime.Loader": "1.0.0-beta3",
-          "Newtonsoft.Json": "6.0.6"
+          "Microsoft.Framework.Runtime.Loader": "1.0.0-beta5",
+          "Microsoft.Framework.Runtime.Caching": "1.0.0-beta5",
+          "Microsoft.Framework.Runtime.Abstractions": "1.0.0-beta5"
         },
         "frameworkAssemblies": [
           "System.Collections",
+          "System.Text.Encoding",
+          "System.Threading.Tasks",
           "System.IO",
           "System.IO.Compression",
           "System.IO.Compression.FileSystem",
@@ -1425,10 +1428,10 @@
           "Microsoft.CSharp"
         ],
         "compile": {
-          "lib/aspnet50/Microsoft.Framework.Runtime.dll": {}
+          "lib/dnx451/Microsoft.Framework.Runtime.dll": {}
         },
         "runtime": {
-          "lib/aspnet50/Microsoft.Framework.Runtime.dll": {}
+          "lib/dnx451/Microsoft.Framework.Runtime.dll": {}
         }
       },
       "Microsoft.Framework.Runtime.Abstractions/1.0.0-beta5": {
@@ -1462,7 +1465,10 @@
           "lib/dnx451/Microsoft.Framework.Runtime.Caching.dll": {}
         }
       },
-      "Microsoft.Framework.Runtime.Interfaces/1.0.0-beta3": {
+      "Microsoft.Framework.Runtime.Loader/1.0.0-beta5": {
+        "dependencies": {
+          "Microsoft.Framework.Runtime.Abstractions": "1.0.0-beta5"
+        },
         "frameworkAssemblies": [
           "mscorlib",
           "System",
@@ -1470,24 +1476,10 @@
           "Microsoft.CSharp"
         ],
         "compile": {
-          "lib/aspnet50/Microsoft.Framework.Runtime.Interfaces.dll": {}
+          "lib/dnx451/Microsoft.Framework.Runtime.Loader.dll": {}
         },
         "runtime": {
-          "lib/aspnet50/Microsoft.Framework.Runtime.Interfaces.dll": {}
-        }
-      },
-      "Microsoft.Framework.Runtime.Loader/1.0.0-beta3": {
-        "frameworkAssemblies": [
-          "mscorlib",
-          "System",
-          "System.Core",
-          "Microsoft.CSharp"
-        ],
-        "compile": {
-          "lib/aspnet50/Microsoft.Framework.Runtime.Loader.dll": {}
-        },
-        "runtime": {
-          "lib/aspnet50/Microsoft.Framework.Runtime.Loader.dll": {}
+          "lib/dnx451/Microsoft.Framework.Runtime.Loader.dll": {}
         }
       },
       "Microsoft.Framework.Runtime.Roslyn/1.0.0-beta5": {
@@ -1550,7 +1542,7 @@
           "lib/dnx451/Microsoft.Framework.Runtime.Roslyn.Common.dll": {}
         }
       },
-      "Microsoft.Framework.TestAdapter/1.0.0-beta3": {
+      "Microsoft.Framework.TestAdapter/1.0.0-beta5": {
         "frameworkAssemblies": [
           "mscorlib",
           "System",
@@ -1558,18 +1550,20 @@
           "Microsoft.CSharp"
         ],
         "compile": {
-          "lib/aspnet50/Microsoft.Framework.TestAdapter.dll": {}
+          "lib/dnx451/Microsoft.Framework.TestAdapter.dll": {}
         },
         "runtime": {
-          "lib/aspnet50/Microsoft.Framework.TestAdapter.dll": {}
+          "lib/dnx451/Microsoft.Framework.TestAdapter.dll": {}
         }
       },
-      "Microsoft.Framework.TestHost/1.0.0-beta3": {
+      "Microsoft.Framework.TestHost/1.0.0-beta5": {
         "dependencies": {
-          "Microsoft.Framework.TestAdapter": "1.0.0-beta3",
-          "Microsoft.Framework.ApplicationHost": "1.0.0-beta3",
-          "Microsoft.Framework.CommandLineUtils": "1.0.0-beta3",
-          "Microsoft.Framework.Runtime": "1.0.0-beta3",
+          "Microsoft.Framework.TestAdapter": "1.0.0-beta5",
+          "Microsoft.Framework.ApplicationHost": "1.0.0-beta5",
+          "Microsoft.Framework.CommandLineUtils.Sources": "1.0.0-beta5",
+          "Microsoft.Framework.Logging": "1.0.0-beta5",
+          "Microsoft.Framework.Runtime": "1.0.0-beta5",
+          "Microsoft.Framework.Runtime.Abstractions": "1.0.0-beta5",
           "Newtonsoft.Json": "6.0.6"
         },
         "frameworkAssemblies": [
@@ -1579,10 +1573,10 @@
           "Microsoft.CSharp"
         ],
         "compile": {
-          "lib/aspnet50/Microsoft.Framework.TestHost.dll": {}
+          "lib/dnx451/Microsoft.Framework.TestHost.dll": {}
         },
         "runtime": {
-          "lib/aspnet50/Microsoft.Framework.TestHost.dll": {}
+          "lib/dnx451/Microsoft.Framework.TestHost.dll": {}
         }
       },
       "Microsoft.Framework.WebEncoders/1.0.0-beta5": {
@@ -1859,12 +1853,14 @@
           "lib/dnx451/xunit.execution.dnx.dll": {}
         }
       },
-      "xunit.runner.aspnet/2.1.0-beta1-build60": {
+      "xunit.runner.dnx/2.1.0-beta3-build99": {
         "dependencies": {
-          "Microsoft.Framework.Runtime.Interfaces": "1.0.0-beta3",
-          "Microsoft.Framework.TestAdapter": "1.0.0-beta3",
-          "Microsoft.Framework.TestHost": "1.0.0-beta3",
-          "xunit.runner.utility": "2.1.0-beta1-build2945"
+          "Microsoft.Framework.Runtime": "1.0.0-beta5",
+          "Microsoft.Framework.Runtime.Abstractions": "1.0.0-beta5",
+          "Microsoft.Framework.TestAdapter": "1.0.0-beta5",
+          "Microsoft.Framework.TestHost": "1.0.0-beta5",
+          "xunit.runner.utility": "2.1.0-beta3-build3029",
+          "xunit.runner.reporters": "2.1.0-beta3-build3029"
         },
         "frameworkAssemblies": [
           "System.Collections",
@@ -1880,32 +1876,33 @@
           "Microsoft.CSharp"
         ],
         "compile": {
-          "lib/aspnet50/xunit.runner.aspnet.dll": {}
+          "lib/dnx451/xunit.runner.dnx.dll": {}
         },
         "runtime": {
-          "lib/aspnet50/xunit.runner.aspnet.dll": {}
+          "lib/dnx451/xunit.runner.dnx.dll": {}
         }
       },
-      "xunit.runner.utility/2.1.0-beta1-build2945": {
+      "xunit.runner.reporters/2.1.0-beta3-build3029": {
+        "dependencies": {
+          "Newtonsoft.Json": "6.0.6",
+          "xunit.runner.utility": "2.1.0-beta3-build3029"
+        },
+        "compile": {
+          "lib/dnx451/xunit.runner.reporters.dnx.dll": {}
+        },
+        "runtime": {
+          "lib/dnx451/xunit.runner.reporters.dnx.dll": {}
+        }
+      },
+      "xunit.runner.utility/2.1.0-beta3-build3029": {
         "dependencies": {
           "xunit.abstractions": "[2.0.0]"
         },
-        "frameworkAssemblies": [
-          "Microsoft.CSharp",
-          "mscorlib",
-          "System",
-          "System.Collections",
-          "System.Core",
-          "System.Reflection",
-          "System.Runtime",
-          "System.Web",
-          "System.Xml"
-        ],
         "compile": {
-          "lib/aspnet50/xunit.runner.utility.AspNet.dll": {}
+          "lib/dnx451/xunit.runner.utility.dnx.dll": {}
         },
         "runtime": {
-          "lib/aspnet50/xunit.runner.utility.AspNet.dll": {}
+          "lib/dnx451/xunit.runner.utility.dnx.dll": {}
         }
       }
     }
@@ -2727,16 +2724,16 @@
         "ref/win8/_._"
       ]
     },
-    "Microsoft.Framework.ApplicationHost/1.0.0-beta3": {
-      "sha512": "nYIGSnCnBF0LaZ8ddZA37PgI9ahnBjGpTsQW7H5ggvY+rUro5+kWWoLB62CFGgaOaMQYRcPeEPlBAl7/vzEPeA==",
+    "Microsoft.Framework.ApplicationHost/1.0.0-beta5": {
+      "sha512": "MR2arJidpFSuQRk+mIuWVRWWyK8yB/4+1Oho6XTbV4gukpo4XhEW/Dm4d3HadbGX4+GK1sn+5ctfJFo6kF55ag==",
       "files": [
-        "Microsoft.Framework.ApplicationHost.1.0.0-beta3.nupkg",
-        "Microsoft.Framework.ApplicationHost.1.0.0-beta3.nupkg.sha512",
+        "Microsoft.Framework.ApplicationHost.1.0.0-beta5.nupkg",
+        "Microsoft.Framework.ApplicationHost.1.0.0-beta5.nupkg.sha512",
         "Microsoft.Framework.ApplicationHost.nuspec",
-        "lib/aspnet50/Microsoft.Framework.ApplicationHost.dll",
-        "lib/aspnet50/Microsoft.Framework.ApplicationHost.xml",
-        "lib/aspnetcore50/Microsoft.Framework.ApplicationHost.dll",
-        "lib/aspnetcore50/Microsoft.Framework.ApplicationHost.xml"
+        "lib/dnx451/Microsoft.Framework.ApplicationHost.dll",
+        "lib/dnx451/Microsoft.Framework.ApplicationHost.xml",
+        "lib/dnxcore50/Microsoft.Framework.ApplicationHost.dll",
+        "lib/dnxcore50/Microsoft.Framework.ApplicationHost.xml"
       ]
     },
     "Microsoft.Framework.Caching.Abstractions/1.0.0-beta5": {
@@ -2769,16 +2766,16 @@
         "lib/net45/Microsoft.Framework.Caching.Memory.xml"
       ]
     },
-    "Microsoft.Framework.CommandLineUtils/1.0.0-beta3": {
-      "sha512": "UbmM4llCxh+ddOkrM7o9yPE38oZKuw6J9RR89389EYB6J1MvntxIaw90T5IcU79kkZn2se3V5/y1L1hCUZMh3Q==",
+    "Microsoft.Framework.CommandLineUtils.Sources/1.0.0-beta5": {
+      "sha512": "sZIlSWm9r2CFDI5JB21lKwa8Hq7DZPBYx3LcBnuxZnhSh2AwrhrS88YUZSMP6QCV+PHMwj0udTdnS1eZ2DbM7w==",
       "files": [
-        "Microsoft.Framework.CommandLineUtils.1.0.0-beta3.nupkg",
-        "Microsoft.Framework.CommandLineUtils.1.0.0-beta3.nupkg.sha512",
-        "Microsoft.Framework.CommandLineUtils.nuspec",
-        "lib/aspnet50/Microsoft.Framework.CommandLineUtils.dll",
-        "lib/aspnet50/Microsoft.Framework.CommandLineUtils.xml",
-        "lib/aspnetcore50/Microsoft.Framework.CommandLineUtils.dll",
-        "lib/aspnetcore50/Microsoft.Framework.CommandLineUtils.xml",
+        "Microsoft.Framework.CommandLineUtils.Sources.1.0.0-beta5.nupkg",
+        "Microsoft.Framework.CommandLineUtils.Sources.1.0.0-beta5.nupkg.sha512",
+        "Microsoft.Framework.CommandLineUtils.Sources.nuspec",
+        "lib/dnx451/Microsoft.Framework.CommandLineUtils.Sources.dll",
+        "lib/dnx451/Microsoft.Framework.CommandLineUtils.Sources.xml",
+        "lib/dnxcore50/Microsoft.Framework.CommandLineUtils.Sources.dll",
+        "lib/dnxcore50/Microsoft.Framework.CommandLineUtils.Sources.xml",
         "shared/AnsiConsole.cs",
         "shared/CommandArgument.cs",
         "shared/CommandLineApplication.cs",
@@ -3009,16 +3006,17 @@
         "lib/net45/Microsoft.Framework.OptionsModel.xml"
       ]
     },
-    "Microsoft.Framework.Runtime/1.0.0-beta3": {
-      "sha512": "+YsY3mP9rAYNwjwxpeAknSx5d5/PjJC+b/h+C20E93oIBIPUmui7PM5/hF18BaQ7v/tMnpGKLN9YZTYefm1b7A==",
+    "Microsoft.Framework.Runtime/1.0.0-beta5": {
+      "serviceable": true,
+      "sha512": "feBypBwOlylGFJsPbi8YH0MzCuvhvV0GHqSX/FvvFhWWU/lQnozVNKGZPq+4T6zfhoteo/acMB0c5rfQx8agMw==",
       "files": [
-        "Microsoft.Framework.Runtime.1.0.0-beta3.nupkg",
-        "Microsoft.Framework.Runtime.1.0.0-beta3.nupkg.sha512",
+        "Microsoft.Framework.Runtime.1.0.0-beta5.nupkg",
+        "Microsoft.Framework.Runtime.1.0.0-beta5.nupkg.sha512",
         "Microsoft.Framework.Runtime.nuspec",
-        "lib/aspnet50/Microsoft.Framework.Runtime.dll",
-        "lib/aspnet50/Microsoft.Framework.Runtime.xml",
-        "lib/aspnetcore50/Microsoft.Framework.Runtime.dll",
-        "lib/aspnetcore50/Microsoft.Framework.Runtime.xml"
+        "lib/dnx451/Microsoft.Framework.Runtime.dll",
+        "lib/dnx451/Microsoft.Framework.Runtime.xml",
+        "lib/dnxcore50/Microsoft.Framework.Runtime.dll",
+        "lib/dnxcore50/Microsoft.Framework.Runtime.xml"
       ]
     },
     "Microsoft.Framework.Runtime.Abstractions/1.0.0-beta5": {
@@ -3046,28 +3044,17 @@
         "lib/dnxcore50/Microsoft.Framework.Runtime.Caching.xml"
       ]
     },
-    "Microsoft.Framework.Runtime.Interfaces/1.0.0-beta3": {
-      "sha512": "HFls1fjVx7CD5/XUFtwhg0vu90jdMvJLj4KwSYicQagFHGHgk8IyU8IFHNfkJHqn1ACUK1s2qDIhbwXIOM1jug==",
+    "Microsoft.Framework.Runtime.Loader/1.0.0-beta5": {
+      "serviceable": true,
+      "sha512": "rYI6kMs3OPVYnpeIh1y1pg0eQ7+DyEph3+3UEToEDB8RnlXpVAoRgyIkreLv3sVsyCdI5J1AP2NitmEc3368FQ==",
       "files": [
-        "Microsoft.Framework.Runtime.Interfaces.1.0.0-beta3.nupkg",
-        "Microsoft.Framework.Runtime.Interfaces.1.0.0-beta3.nupkg.sha512",
-        "Microsoft.Framework.Runtime.Interfaces.nuspec",
-        "lib/aspnet50/Microsoft.Framework.Runtime.Interfaces.dll",
-        "lib/aspnet50/Microsoft.Framework.Runtime.Interfaces.xml",
-        "lib/aspnetcore50/Microsoft.Framework.Runtime.Interfaces.dll",
-        "lib/aspnetcore50/Microsoft.Framework.Runtime.Interfaces.xml"
-      ]
-    },
-    "Microsoft.Framework.Runtime.Loader/1.0.0-beta3": {
-      "sha512": "aSoXzPIAGEDFQ4f/KgYLc8O2cALnwkIt+gUUrkYry/vTgm4xgH9/+4ve1SkRM6rtJmcr5DX+z8+Ov3qRtnJ4Jw==",
-      "files": [
-        "Microsoft.Framework.Runtime.Loader.1.0.0-beta3.nupkg",
-        "Microsoft.Framework.Runtime.Loader.1.0.0-beta3.nupkg.sha512",
+        "Microsoft.Framework.Runtime.Loader.1.0.0-beta5.nupkg",
+        "Microsoft.Framework.Runtime.Loader.1.0.0-beta5.nupkg.sha512",
         "Microsoft.Framework.Runtime.Loader.nuspec",
-        "lib/aspnet50/Microsoft.Framework.Runtime.Loader.dll",
-        "lib/aspnet50/Microsoft.Framework.Runtime.Loader.xml",
-        "lib/aspnetcore50/Microsoft.Framework.Runtime.Loader.dll",
-        "lib/aspnetcore50/Microsoft.Framework.Runtime.Loader.xml"
+        "lib/dnx451/Microsoft.Framework.Runtime.Loader.dll",
+        "lib/dnx451/Microsoft.Framework.Runtime.Loader.xml",
+        "lib/dnxcore50/Microsoft.Framework.Runtime.Loader.dll",
+        "lib/dnxcore50/Microsoft.Framework.Runtime.Loader.xml"
       ]
     },
     "Microsoft.Framework.Runtime.Roslyn/1.0.0-beta5": {
@@ -3109,28 +3096,31 @@
         "lib/dnxcore50/Microsoft.Framework.Runtime.Roslyn.Common.xml"
       ]
     },
-    "Microsoft.Framework.TestAdapter/1.0.0-beta3": {
-      "sha512": "6rtZs1WI7pPN2G25L8aPM1nejo+HFi4s72aqE/H4FIB1QU+3FdND7etzjiX0psCag2xmAUqlRnVg6OHbWSd82w==",
+    "Microsoft.Framework.TestAdapter/1.0.0-beta5": {
+      "serviceable": true,
+      "sha512": "9Rv5Kl/R/MRaStqDl8fLZHeKdA2WDNbwMzNeK97BUsmaQnG2kBapvWOhDbSzGKbocO+VKLZYfhu7la9MmivvRg==",
       "files": [
-        "Microsoft.Framework.TestAdapter.1.0.0-beta3.nupkg",
-        "Microsoft.Framework.TestAdapter.1.0.0-beta3.nupkg.sha512",
+        "Microsoft.Framework.TestAdapter.1.0.0-beta5.nupkg",
+        "Microsoft.Framework.TestAdapter.1.0.0-beta5.nupkg.sha512",
         "Microsoft.Framework.TestAdapter.nuspec",
-        "lib/aspnet50/Microsoft.Framework.TestAdapter.dll",
-        "lib/aspnet50/Microsoft.Framework.TestAdapter.xml",
-        "lib/aspnetcore50/Microsoft.Framework.TestAdapter.dll",
-        "lib/aspnetcore50/Microsoft.Framework.TestAdapter.xml"
+        "lib/dnx451/Microsoft.Framework.TestAdapter.dll",
+        "lib/dnx451/Microsoft.Framework.TestAdapter.xml",
+        "lib/dnxcore50/Microsoft.Framework.TestAdapter.dll",
+        "lib/dnxcore50/Microsoft.Framework.TestAdapter.xml"
       ]
     },
-    "Microsoft.Framework.TestHost/1.0.0-beta3": {
-      "sha512": "rPg9Y70Y2nl2xehw0ExCL17FRxuo9fygf7+HOi5Q5sBLJO6cfa7fuElE/NHKKi/S0XUK4jxSHD2rvKMbNhoGSw==",
+    "Microsoft.Framework.TestHost/1.0.0-beta5": {
+      "serviceable": true,
+      "sha512": "2cWQFV+YWvN4FcvIefkO2W4Jj3ow6zNOmCNW2nVvbsleX8K+Cf+cGiukndVNbl12rPCliD7yu/gFHB7A8QrV7g==",
       "files": [
-        "Microsoft.Framework.TestHost.1.0.0-beta3.nupkg",
-        "Microsoft.Framework.TestHost.1.0.0-beta3.nupkg.sha512",
+        "Microsoft.Framework.TestHost.1.0.0-beta5.nupkg",
+        "Microsoft.Framework.TestHost.1.0.0-beta5.nupkg.sha512",
         "Microsoft.Framework.TestHost.nuspec",
-        "lib/aspnet50/Microsoft.Framework.TestHost.dll",
-        "lib/aspnet50/Microsoft.Framework.TestHost.xml",
-        "lib/aspnetcore50/Microsoft.Framework.TestHost.dll",
-        "lib/aspnetcore50/Microsoft.Framework.TestHost.xml"
+        "app/project.json",
+        "lib/dnx451/Microsoft.Framework.TestHost.dll",
+        "lib/dnx451/Microsoft.Framework.TestHost.xml",
+        "lib/dnxcore50/Microsoft.Framework.TestHost.dll",
+        "lib/dnxcore50/Microsoft.Framework.TestHost.xml"
       ]
     },
     "Microsoft.Framework.WebEncoders/1.0.0-beta5": {
@@ -3629,30 +3619,44 @@
         "lib/Xamarin.iOS/xunit.execution.iOS-Universal.xml"
       ]
     },
-    "xunit.runner.aspnet/2.1.0-beta1-build60": {
-      "sha512": "MIvM2Td4CnPx1gwlIiepPjt/6Bvv26mUvC0a/8TUI9HJG1uvHk426mGabOw7X0pPbjOkaKZpt4gcTbQH1QRZ9Q==",
+    "xunit.runner.dnx/2.1.0-beta3-build99": {
+      "sha512": "R6cvKy3mb8QjMxiTHqljsgwf424jYLbU07Ao0NcNHcRMT2OR+a2ldE6WdECiDMseYz/vuIaFQ6ebYRKEfMI/1A==",
       "files": [
-        "xunit.runner.aspnet.2.1.0-beta1-build60.nupkg",
-        "xunit.runner.aspnet.2.1.0-beta1-build60.nupkg.sha512",
-        "xunit.runner.aspnet.nuspec",
-        "lib/aspnet50/xunit.runner.aspnet.dll",
-        "lib/aspnet50/xunit.runner.aspnet.xml",
-        "lib/aspnetcore50/xunit.runner.aspnet.dll",
-        "lib/aspnetcore50/xunit.runner.aspnet.xml"
+        "xunit.runner.dnx.2.1.0-beta3-build99.nupkg",
+        "xunit.runner.dnx.2.1.0-beta3-build99.nupkg.sha512",
+        "xunit.runner.dnx.nuspec",
+        "app/project.json",
+        "app/xunit",
+        "app/xunit.cmd",
+        "lib/dnx451/xunit.runner.dnx.dll",
+        "lib/dnx451/xunit.runner.dnx.xml",
+        "lib/dnxcore50/xunit.runner.dnx.dll",
+        "lib/dnxcore50/xunit.runner.dnx.xml"
       ]
     },
-    "xunit.runner.utility/2.1.0-beta1-build2945": {
-      "sha512": "x1Ez6tbN0AmclihIYybSNf4c4/VlPUt46dWX3wKMmK7CGDBcqKf6NKwfBHNolnuAZPfGCahYNeyk/K8WXlKjKQ==",
+    "xunit.runner.reporters/2.1.0-beta3-build3029": {
+      "sha512": "o+hiJTewV+4cA2GoHgbNC/FATjKxo2Z6PPeIdIfc7qysvYtu33POYUdo5XAqlRD9BQ7ojc8t/NOyZg/Qd9kjAg==",
       "files": [
-        "xunit.runner.utility.2.1.0-beta1-build2945.nupkg",
-        "xunit.runner.utility.2.1.0-beta1-build2945.nupkg.sha512",
+        "xunit.runner.reporters.2.1.0-beta3-build3029.nupkg",
+        "xunit.runner.reporters.2.1.0-beta3-build3029.nupkg.sha512",
+        "xunit.runner.reporters.nuspec",
+        "lib/dnx451/xunit.runner.reporters.dnx.dll",
+        "lib/dnxcore50/xunit.runner.reporters.dnx.dll",
+        "lib/net45/xunit.runner.reporters.desktop.dll"
+      ]
+    },
+    "xunit.runner.utility/2.1.0-beta3-build3029": {
+      "sha512": "cm5lVNYtypOLgu6Vnd30UWPVNrcILzWmSul7tFrW/xT+ZjPYSES7kvYc80rKAUWXQl/awglhc5IMtAbHJi4abg==",
+      "files": [
+        "xunit.runner.utility.2.1.0-beta3-build3029.nupkg",
+        "xunit.runner.utility.2.1.0-beta3-build3029.nupkg.sha512",
         "xunit.runner.utility.nuspec",
-        "lib/aspnet50/xunit.runner.utility.AspNet.dll",
-        "lib/aspnet50/xunit.runner.utility.AspNet.pdb",
-        "lib/aspnet50/xunit.runner.utility.AspNet.xml",
-        "lib/aspnetcore50/xunit.runner.utility.AspNet.dll",
-        "lib/aspnetcore50/xunit.runner.utility.AspNet.pdb",
-        "lib/aspnetcore50/xunit.runner.utility.AspNet.xml",
+        "lib/dnx451/xunit.runner.utility.dnx.dll",
+        "lib/dnx451/xunit.runner.utility.dnx.pdb",
+        "lib/dnx451/xunit.runner.utility.dnx.xml",
+        "lib/dnxcore50/xunit.runner.utility.dnx.dll",
+        "lib/dnxcore50/xunit.runner.utility.dnx.pdb",
+        "lib/dnxcore50/xunit.runner.utility.dnx.xml",
         "lib/monoandroid/xunit.runner.utility.MonoAndroid.dll",
         "lib/monoandroid/xunit.runner.utility.MonoAndroid.pdb",
         "lib/monoandroid/xunit.runner.utility.MonoAndroid.xml",
@@ -3666,9 +3670,6 @@
         "lib/portable-wpa81+win81/xunit.runner.utility.universal.pdb",
         "lib/portable-wpa81+win81/xunit.runner.utility.universal.pri",
         "lib/portable-wpa81+win81/xunit.runner.utility.universal.xml",
-        "lib/win8/xunit.runner.utility.win8.dll",
-        "lib/win8/xunit.runner.utility.win8.pdb",
-        "lib/win8/xunit.runner.utility.win8.xml",
         "lib/wp8/xunit.runner.utility.wp8.dll",
         "lib/wp8/xunit.runner.utility.wp8.pdb",
         "lib/wp8/xunit.runner.utility.wp8.xml",
