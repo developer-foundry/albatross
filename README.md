@@ -7,11 +7,10 @@ incorporate React.js, Rx.NET, RethinkDB, and ASP.NET 5.
 ![Architecture](http://i.imgur.com/C9kAODc.png)
 
 ##Roadmap
-1. Create WebAPI Example (GET) Server Side -- Done
-2. Create SignalR Example (Get) Server Side
+1. Create Enumerable (WebAPI) Example (GET) Server Side -- Done
+2. Create Observable (SignalR) Example (GET) Server Side
 3. Flesh out both APIs for CRUD
 4. Integrate React.JS server side
-5. Create generators for server side
-6. Flesh out Flux patter client side
-7. Build Store/Cache/Fetch patterns client side
-8. Create generators for client side.
+5. Flesh out Flux patter client side
+6. Build Store/Cache/Fetch patterns client side
+7. Create generators for full stack.
