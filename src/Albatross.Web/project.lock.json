@@ -1764,6 +1764,20 @@
           "lib/net45/System.Reactive.PlatformServices.dll": {}
         }
       },
+      "Rx-Testing/2.2.5": {
+        "dependencies": {
+          "Rx-Main": "2.2.5"
+        },
+        "frameworkAssemblies": [
+          "Microsoft.VisualStudio.QualityTools.UnitTestFramework"
+        ],
+        "compile": {
+          "lib/net45/Microsoft.Reactive.Testing.dll": {}
+        },
+        "runtime": {
+          "lib/net45/Microsoft.Reactive.Testing.dll": {}
+        }
+      },
       "System.Collections/4.0.10-beta-23019": {
         "dependencies": {
           "System.Runtime": "4.0.0-beta-23019"
@@ -3418,6 +3432,26 @@
         "lib/windowsphone71/System.Reactive.PlatformServices.XML",
         "lib/windowsphone8/System.Reactive.PlatformServices.dll",
         "lib/windowsphone8/System.Reactive.PlatformServices.XML"
+      ]
+    },
+    "Rx-Testing/2.2.5": {
+      "sha512": "bq423wYgkK4p0idk8zCIaspAF3qWz6uUiFuIzckLpztXrJDixasn1eqyj5fXRVkxk5uV+URI2UYAlF1EdrYvbw==",
+      "files": [
+        "Rx-Testing.2.2.5.nupkg",
+        "Rx-Testing.2.2.5.nupkg.sha512",
+        "Rx-Testing.nuspec",
+        "lib/net40/Microsoft.Reactive.Testing.dll",
+        "lib/net40/Microsoft.Reactive.Testing.XML",
+        "lib/net45/Microsoft.Reactive.Testing.dll",
+        "lib/net45/Microsoft.Reactive.Testing.XML",
+        "lib/sl5/Microsoft.Reactive.Testing.dll",
+        "lib/sl5/Microsoft.Reactive.Testing.XML",
+        "lib/windows8/Microsoft.Reactive.Testing.dll",
+        "lib/windows8/Microsoft.Reactive.Testing.XML",
+        "lib/windowsphone71/Microsoft.Reactive.Testing.dll",
+        "lib/windowsphone71/Microsoft.Reactive.Testing.XML",
+        "lib/windowsphone8/Microsoft.Reactive.Testing.dll",
+        "lib/windowsphone8/Microsoft.Reactive.Testing.XML"
       ]
     },
     "System.Collections/4.0.10-beta-23019": {

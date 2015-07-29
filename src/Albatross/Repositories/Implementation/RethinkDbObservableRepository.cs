@@ -3,26 +3,25 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Net;
 using System.Reactive.Linq;
-using System.Threading.Tasks;
 using Albatross.Configuration;
 using Albatross.Repositories.Interfaces;
 using Microsoft.Framework.OptionsModel;
 using RethinkDb;
 using RethinkDb.ConnectionFactories;
 
-namespace Albatross.Repositories
+namespace Albatross.Repositories.Implementation
 {
-    public class RethinkDbRepository<T> : IAlbatrossRepository<T> where T : class
+    public class RethinkDbObservableRepository<T> : IAlbatrossObservableRepository<T> where T : class
     {
         private readonly IDatabaseQuery _db;
         private readonly ITableQuery<T> _table;
         private readonly IConnectionFactory _connectionFactory;
         private readonly IConnection _conn;
 
-        public RethinkDbRepository(IOptions<RethinkConfiguration> settings)
+        public RethinkDbObservableRepository(IOptions<RethinkConfiguration> settings)
         {
             _db = Query.Db(settings.Options.Database);
-            _table = _db.Table<T>(typeof (T).Name.ToLower());
+            _table = _db.Table<T>(typeof(T).Name.ToLower());
             _connectionFactory = new DefaultConnectionFactory(
                 new List<EndPoint>()
                 {
@@ -31,9 +30,10 @@ namespace Albatross.Repositories
             _conn = _connectionFactory.Get();
         }
 
-        public IEnumerable<T> Get()
+        public IObservable<T> Get()
         {
-            return _conn.Run(_table);
+            var results = _conn.Run(_table).ToList();
+            return results.ToObservable();
         }
 
         public void Create(T item)

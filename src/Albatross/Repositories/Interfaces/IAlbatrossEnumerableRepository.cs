@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace Albatross.Repositories.Interfaces
 {
-    public interface IAlbatrossRepository<T> where T : class
+    public interface IAlbatrossEnumerableRepository<T> where T : class
     {
         IEnumerable<T> Get();
         void Create(T item);

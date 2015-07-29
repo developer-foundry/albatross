@@ -4,8 +4,10 @@ using System.Linq;
 using System.Threading.Tasks;
 using Albatross.Configuration;
 using Albatross.Repositories;
+using Albatross.Repositories.Implementation;
 using Albatross.Repositories.Interfaces;
 using Albatross.Services;
+using Albatross.Services.Implementation;
 using Albatross.Services.Interfaces;
 using Albatross.Web.Example.Models;
 using Albatross.Web.Example.Services;
@@ -96,9 +98,9 @@ namespace Albatross.Web.Example
             //Albatross Configuration
             services.Configure<RethinkConfiguration>(Configuration.GetConfigurationSection("Rethink"));
             services.AddScoped<IAlbatrossObservableRepository<ToDo>, RethinkDbObservableRepository<ToDo>>();
-            services.AddScoped<IAlbatrossRepository<ToDo>, RethinkDbRepository<ToDo>>();
+            services.AddScoped<IAlbatrossEnumerableRepository<ToDo>, RethinkDbEnumerableRepository<ToDo>>();
             services.AddScoped<IAlbatrossObservableService<ToDo>, AlbatrossObservableService<ToDo>>();
-            services.AddScoped<IAlbatrossService<ToDo>, AlbatrossService<ToDo>>();
+            services.AddScoped<IAlbatrossService<ToDo>, AlbatrossEnumerableService<ToDo>>();
 
             services.AddSignalR();
         }

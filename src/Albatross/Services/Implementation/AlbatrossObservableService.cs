@@ -1,11 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Albatross.Repositories.Interfaces;
 using Albatross.Services.Interfaces;
 
-namespace Albatross.Services
+namespace Albatross.Services.Implementation
 {
     public class AlbatrossObservableService<T> : IAlbatrossObservableService<T> where T : class
     {
