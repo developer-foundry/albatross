@@ -1678,6 +1678,14 @@
           "lib/dnx451/Microsoft.VisualStudio.Web.BrowserLink.Loader.dll": {}
         }
       },
+      "Moq/4.2.1507.0118": {
+        "compile": {
+          "lib/net40/Moq.dll": {}
+        },
+        "runtime": {
+          "lib/net40/Moq.dll": {}
+        }
+      },
       "Newtonsoft.Json/6.0.6": {
         "compile": {
           "lib/net45/Newtonsoft.Json.dll": {}
@@ -3204,6 +3212,20 @@
         "Microsoft.VisualStudio.Web.BrowserLink.Loader.nuspec",
         "lib/dnx451/Microsoft.VisualStudio.Web.BrowserLink.Loader.dll",
         "lib/dnxcore50/Microsoft.VisualStudio.Web.BrowserLink.Loader.dll"
+      ]
+    },
+    "Moq/4.2.1507.0118": {
+      "sha512": "QfnD/kZcaV6mX1cWHta3yMn/d9ly9Q62yNmHQVArKaZcFcuFb4USYeHR/4XoA258WeJ2XfrGMPVQVIURRCoyNw==",
+      "files": [
+        "Moq.4.2.1507.0118.nupkg",
+        "Moq.4.2.1507.0118.nupkg.sha512",
+        "Moq.nuspec",
+        "lib/net35/Moq.dll",
+        "lib/net35/Moq.xml",
+        "lib/net40/Moq.dll",
+        "lib/net40/Moq.xml",
+        "lib/sl5/Moq.Silverlight.dll",
+        "lib/sl5/Moq.Silverlight.xml"
       ]
     },
     "Newtonsoft.Json/6.0.6": {
