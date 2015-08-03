@@ -38,7 +38,7 @@ namespace Albatross.Repositories.Implementation
 
         public void Create(T item)
         {
-            throw new NotImplementedException();
+            _conn.Run(_table.Insert(item));
         }
 
         public void Create(IEnumerable<T> items)
