@@ -74,6 +74,16 @@ namespace Albatross.Tests.Integration.Repositories
         }
 
         [Fact]
+        public async void CanGetBeReactive()
+        {
+            var results = _repository.Get();
+            Assert.Equal(6, await results.ToAsyncEnumerable().Count());
+
+            _repository.Create(new ToDo() { Id = Guid.Parse("56459C90-6158-4382-BABE-C87755644EE2"), Name = "Test6", Priority = 6 });
+            Assert.Equal(7, await results.ToAsyncEnumerable().Count());
+        }
+
+        [Fact]
         public async void CanNotGetInvalidItem()
         {
             var result = await _repository.Get().FirstOrDefaultAsync(todo => todo.Id == Guid.NewGuid());

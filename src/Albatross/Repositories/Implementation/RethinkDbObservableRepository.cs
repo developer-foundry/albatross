@@ -33,14 +33,14 @@ namespace Albatross.Repositories.Implementation
                     new IPEndPoint(IPAddress.Parse(settings.Options.IpAddress), settings.Options.Port)
                 });
             _conn = _connectionFactory.Get();
+
+            var changefeedThread = new Thread(ChangeFeedMonitor);
+            changefeedThread.Start();
         }
 
         public IObservable<T> Get()
         {
             var results = _conn.Run(_table).ToList();
-            var changefeedThread = new Thread(ChangeFeedMonitor);
-            changefeedThread.Start();
-
             return results.ToObservable();
         }
 
@@ -78,28 +78,28 @@ namespace Albatross.Repositories.Implementation
         {
             try
             {
-                    foreach (var change in _conn.Run(_table.Changes(), cancellationToken: stopMonitor.Token))
+                foreach (var change in _conn.Run(_table.Changes(), cancellationToken: stopMonitor.Token))
+                {
+                    string type;
+                    Guid id;
+                    if (change.NewValue == null)
                     {
-                        string type;
-                        Guid id;
-                        if (change.NewValue == null)
-                        {
-                            type = "DELETE";
-                            id = change.OldValue.Id;
-                        }
-                        else if (change.OldValue == null)
-                        {
-                            type = "INSERT";
-                            id = change.NewValue.Id;
-                        }
-                        else
-                        {
-                            type = "UPDATE";
-                            id = change.NewValue.Id;
-                        }
-
-                        Console.WriteLine("{0}: Monitored change to Person table, {1} of id {2}", DateTime.Now, type, id);
+                        type = "DELETE";
+                        id = change.OldValue.Id;
                     }
+                    else if (change.OldValue == null)
+                    {
+                        type = "INSERT";
+                        id = change.NewValue.Id;
+                    }
+                    else
+                    {
+                        type = "UPDATE";
+                        id = change.NewValue.Id;
+                    }
+
+                    Console.WriteLine("{0}: Monitored change to Person table, {1} of id {2}", DateTime.Now, type, id);
+                }
             }
             catch (AggregateException ex)
             {
