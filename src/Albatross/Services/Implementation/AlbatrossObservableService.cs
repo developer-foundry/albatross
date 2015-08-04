@@ -1,11 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using Albatross.Models;
 using Albatross.Repositories.Interfaces;
 using Albatross.Services.Interfaces;
 
 namespace Albatross.Services.Implementation
 {
-    public class AlbatrossObservableService<T> : IAlbatrossObservableService<T> where T : class
+    public class AlbatrossObservableService<T> : IAlbatrossObservableService<T> where T : class, IAlbatrossEntity
     {
         private readonly IAlbatrossObservableRepository<T> _repository;
 

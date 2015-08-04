@@ -1,11 +1,12 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using Albatross.Models;
 using Albatross.Repositories.Interfaces;
 using RethinkDb.QueryTerm;
 
 namespace Albatross.Repositories.Implementation
 {
-    public class InMemoryEnumerableRepository<T> : IAlbatrossEnumerableRepository<T> where T : class
+    public class InMemoryEnumerableRepository<T> : IAlbatrossEnumerableRepository<T> where T : class, IAlbatrossEntity
     {
         private readonly IList<T> _repository = new List<T>();
 

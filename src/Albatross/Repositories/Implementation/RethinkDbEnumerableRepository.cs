@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Net;
 using Albatross.Configuration;
+using Albatross.Models;
 using Albatross.Repositories.Interfaces;
 using Microsoft.Framework.OptionsModel;
 using RethinkDb;
@@ -9,7 +10,7 @@ using RethinkDb.ConnectionFactories;
 
 namespace Albatross.Repositories.Implementation
 {
-    public class RethinkDbEnumerableRepository<T> : IAlbatrossEnumerableRepository<T> where T : class
+    public class RethinkDbEnumerableRepository<T> : IAlbatrossEnumerableRepository<T> where T : class, IAlbatrossEntity
     {
         private readonly IDatabaseQuery _db;
         private readonly ITableQuery<T> _table;

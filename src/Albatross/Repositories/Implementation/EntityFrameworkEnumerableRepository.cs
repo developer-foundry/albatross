@@ -1,10 +1,11 @@
 ﻿using System.Collections.Generic;
+using Albatross.Models;
 using Albatross.Repositories.Interfaces;
 using Microsoft.Data.Entity;
 
 namespace Albatross.Repositories.Implementation
 {
-    public class EntityFrameworkEnumerableRepository<T> : IAlbatrossEnumerableRepository<T> where T : class
+    public class EntityFrameworkEnumerableRepository<T> : IAlbatrossEnumerableRepository<T> where T : class, IAlbatrossEntity
     {
         protected readonly DbContext DbContext;
 

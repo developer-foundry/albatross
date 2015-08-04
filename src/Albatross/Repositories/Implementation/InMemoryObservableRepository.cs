@@ -4,11 +4,12 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Reactive.Linq;
 using System.Threading.Tasks;
+using Albatross.Models;
 using Albatross.Repositories.Interfaces;
 
 namespace Albatross.Repositories.Implementation
 {
-    public class InMemoryObservableRepository<T> : IAlbatrossObservableRepository<T> where T : class
+    public class InMemoryObservableRepository<T> : IAlbatrossObservableRepository<T> where T : class, IAlbatrossEntity
     {
         private readonly ObservableCollection<T> _repository;
 

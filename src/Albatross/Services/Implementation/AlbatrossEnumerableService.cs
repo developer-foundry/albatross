@@ -1,10 +1,11 @@
 ﻿using System.Collections.Generic;
+using Albatross.Models;
 using Albatross.Repositories.Interfaces;
 using Albatross.Services.Interfaces;
 
 namespace Albatross.Services.Implementation
 {
-    public class AlbatrossEnumerableService<T> : IAlbatrossService<T> where T : class
+    public class AlbatrossEnumerableService<T> : IAlbatrossService<T> where T : class, IAlbatrossEntity
     {
         private readonly IAlbatrossEnumerableRepository<T> _enumerableRepository;
 
